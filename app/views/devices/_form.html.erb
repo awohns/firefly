@@ -1,0 +1,26 @@
+<%= form_for :device, url: devices_path do |f| %>
+ 
+  <p>
+    <%= f.label :usage %><br>
+    <%= f.text_field :usage %>
+  </p>
+
+  <p>
+    <%= f.label "Serial Number" %></br>
+    <%= f.text_field :serialnumber %>
+  </p>
+
+  <p>
+    <%= f.label "Donation Date" %></br>
+    <%= f.text_field :donationdate %>
+  </p>
+
+  <p>
+    <%= f.label :hospital %></br>
+    <%= f.text_field :hospital %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
