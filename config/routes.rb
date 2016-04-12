@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'static/home'
+
+  get 'static/devices'
+
+  get 'static/help'
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
