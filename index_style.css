@@ -1,0 +1,10 @@
+header {
+	background:
+		linear-gradient(
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0.1)
+		),
+		url(http://static1.squarespace.com/static/5267f3a6e4b0da2bab9939e3/t/56264fcde4b05f5e42ecd97e/1445351389208/DSC_6003(revised).jpg);
+	background-size: cover;
+	height: 100vh;
+}
