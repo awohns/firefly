@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  usage: MyString
+  serialnumber: MyString
+  errors: MyText
+  donationdate: MyString
+  hospital: MyString
+
+two:
+  type: 
+  usage: MyString
+  serialnumber: MyString
+  errors: MyText
+  donationdate: MyString
+  hospital: MyString
