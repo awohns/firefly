@@ -1,14 +1,49 @@
 class DevicesController < ApplicationController
 
 	def new
+		@device = Device.new
+		@devices = Device.all
 	end 
 
 	def create
 		@device = Device.new(device_params)
-
-		@device.save
-		redirect_to @device
+		if @device.save
+    		redirect_to @device
+ 		 else
+    		render 'new'
+  		end
 	end
+
+	def show
+		@devices = Device.all
+    	@device = Device.find(params[:id])
+  	end
+
+  	def index
+    	@devices = Device.all
+  	end
+
+  	def edit
+    	@device = Device.find(params[:id])
+  	end
+
+  	def update
+    	@device = Device.find(params[:id])
+ 
+    	if @device.update(device_params)
+      		redirect_to @device
+    	else
+      		render 'edit'
+    	end
+  	end
+ 
+  def destroy
+    @device = Device.find(params[:id])
+    @device.destroy
+ 
+    redirect_to devices_path
+  end
+
 
 	private
 		def device_params

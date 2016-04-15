@@ -1,17 +1,22 @@
  <table>
   <tr>
-    <th>Usage</th>
-    <th>Serial Number</th>
-    <th>Donation Date</th>
+    <th>Usage |</th>
+    <th>Serial Number |</th>
+    <th>Donation Date |</th>
     <th>Hospital</th>
   </tr>
  
   <% @devices.each do |device| %>
     <tr>
-      <td><%= article.usage %></td>
-      <td><%= article.serialnumber %></td>
-      <td><%= article.donationdate %></td>
-      <td><%= article.hospital %></td>
+      <td><%= device.usage %></td>
+      <td><%= device.serialnumber %></td>
+      <td><%= device.donationdate %></td>
+      <td><%= device.hospital %></td>
+      <td><%= link_to 'Show', device_path(device) %> |</td>
+      <td><%= link_to 'Edit', edit_device_path(device) %> |</td>
+      <td><%= link_to 'Destroy', device_path(device),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
