@@ -336,26 +336,26 @@ input:active, input:focus {
 }
 
 body {
-  background: url(../img/bg.jpg);
+  background: url(../img/bg4.jpg);
   background-size: cover;
   font-family: 'Source Sans Pro', sans-serif;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 300;
 }
 body.bg1 {
-  background: url(../img/bg.jpg);
+  background: url(../img/bg6.jpg);
   background-size: cover;
 }
 body.bg2 {
-  background: url(../img/bg2.jpg);
+  background: url(../img/bg6.jpg);
   background-size: cover;
 }
 body.bg3 {
-  background: url(../img/bg3.jpg);
+  background: url(../img/bg6.jpg);
   background-size: cover;
 }
 body.bg4 {
-  background: url(../img/bg4.jpg);
+  background: url(../img/bg6.jpg);
   background-size: cover;
 }
 
