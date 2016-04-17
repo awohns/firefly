@@ -194,10 +194,30 @@
 					--><label class="fixed-width" for="radio_date_1">Last year</label><!--
 					--><input type="radio" id="radio_date_2" name="tab-radio" value="yesterday"><!--
 					--><label class="fixed-width" for="radio_date_2">Last month</label><!--
-					--><button>
-						<!--<i class="pe-7f-date"></i>-->
+					-->
+				<span class="dropdown open">
+				  <label class="fixed-width" for="radio_date_2"></label>
+				  <button class="btn btn-block violet dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+				    Sort Region
+				    <span class="caret">
+				    	<i class="pe-7g-arrow2-down"></i>
+				    </span>
+						  </button>
+						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+						    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Myanmar</a></li>
+						    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sub-Saharan Africa</a></li>
+						    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Haiti</a></li>
+						  </ul>
+				</span>
+				</div>
+
+
+
+
+	<!-- 				<button>
+						<i class="pe-7f-date"></i>
 						<span>Select Region</span>
-					</button>
+					</button> -->
 				</div>
 			</header> <!-- /main-header -->
 
@@ -461,7 +481,7 @@
 									<i class="pe-7f-speaker"></i></i><h3>Alerts</h3>
 
 -->
-				<div class="col-md-5">
+		<!-- 		<div class="col-md-5">
 						<article class="widget">
 							<header class="widget__header">
 								<div class="widget__title">
@@ -509,7 +529,7 @@
 								</div>
 							-->
 
-									<div class="media message checked">
+									<!-- <div class="media message checked">
 										<div class="media-body">
 											<div class="alert__icon pull-left">
 								  			<i class="pe-7s-check"></i>
@@ -636,7 +656,7 @@
 										</div>
 									</div>
 
-								</div> <!-- /members__container -->
+								</div> <!-- /members__container
 								
 								<div class="clearfix"></div>
 
@@ -646,12 +666,12 @@
 								</div>
 
 							</div>
-						</article><!-- /widget -->
+						</article><!-- /widget
 					</div>
 
 
 				</div> <!-- /row -->
-
+ 
 
 <!-- 				<div class="row">
 					
@@ -706,7 +726,7 @@
 						</article><!-- /widget -->
 					</div>
 
-					<div class="col-md-7">
+					<div class="col-md-12">
 						<article class="widget">
 							<header class="widget__header one-btn">
 								<div class="widget__title">
@@ -722,10 +742,10 @@
 								<table class="table table-striped media-table">
 							  	<thead>
 							  		<tr>
-							  			<th width="270">Post Description</th>
-							  			<th width="120">Date</th>
-							  			<th>Post Info</th>
-							  			<th>Del</th>
+							  			<th width="270">Inventory</th>
+							  			<th width="120">Hours In Use</th>
+							  			<th>Status</th>
+							  			<th>In Use?</th>
 							  		</tr>
 							  	</thead>
 							  	<tbody>
@@ -736,20 +756,45 @@
 							  			<td>
 							  				<div class="media">
 													<figure class="pull-left post__img">
-														<img class="media-object" src="img/post1.jpg" alt="user">
+														<img class="media-object" src="img/device.jpg" alt="user">
 													</figure>
 													<div class="media-body post_desc">
-														<h3>Gravity Psd B-Cards</h3>
-														<p>A classic approach...</p>
-														<button class="btn blue btn-sm">Edit</button>
+														<h3>Firefly 1</h3>
+														<p>Serial #236</p>
+														<!-- <button class="btn blue btn-sm">Edit</button> -->
 													</div>
 												</div>
 							  			</td>
 							  			<td>
-							  				<p class="post__date">26 Feb, 2014 <br>15:20</p>
+							  				<p class="post__date">23 hours, 15 minutes</p>
 							  			</td>
 							  			<td class="not-padding">
-							  				<p class="post__info">A classic approach to our gravity series of psd business cards mockup which can be used for both vertical...</p>
+							  				<p class="post__info">LED shipped (2 Feb, 2015) and received (1 Mar, 2015)</p>
+							  			</td>
+							  			<td>
+							  				<a href="#" onclick="return false;" class="post__del"><i class="pe-7s-check"></i></a>
+							  			</td>
+							  		</tr>
+
+							  		<tr class="spacer"></tr>
+							  		<tr>
+							  			<td>
+							  				<div class="media">
+													<figure class="pull-left post__img">
+														<img class="media-object" src="img/device.jpg" alt="user">
+													</figure>
+													<div class="media-body post_desc">
+														<h3>Firefly 2</h3>
+														<p>Serial #254</p>
+														<!-- <button class="btn blue btn-sm">Edit</button> -->
+													</div>
+												</div>
+							  			</td>
+							  			<td>
+							  				<p class="post__date">94 hours, 12 minutes</p>
+							  			</td>
+							  			<td class="not-padding">
+							  				<p class="post__info">Note: This device will be due for maintence at 100 hours.</p>
 							  			</td>
 							  			<td>
 							  				<a href="#" onclick="return false;" class="post__del"><i class="pe-7f-close"></i></a>
@@ -761,48 +806,23 @@
 							  			<td>
 							  				<div class="media">
 													<figure class="pull-left post__img">
-														<img class="media-object" src="img/post2.jpg" alt="user">
+														<img class="media-object" src="img/device.jpg" alt="user">
 													</figure>
 													<div class="media-body post_desc">
-														<h3>Psd Foil Sticker</h3>
-														<p>A set of shiny psd foil...</p>
-														<button class="btn blue btn-sm">Edit</button>
+														<h3>Firefly 3</h3>
+														<p>Serial #480</p>
+													<!-- 	<button class="btn blue btn-sm">Edit</button> -->
 													</div>
 												</div>
 							  			</td>
 							  			<td>
-							  				<p class="post__date">20 Feb, 2014 <br>11:05</p>
+							  				<p class="post__date">56 hours, 3 minutes</p>
 							  			</td>
 							  			<td class="not-padding">
-							  				<p class="post__info">A set of shiny psd foil stickers to decorate your designs. Easily change the color and content to create a nifty…</p>
+							  				<p class="post__info">Utilization rate on target for month</p>
 							  			</td>
 							  			<td>
-							  				<a href="#" onclick="return false;" class="post__del"><i class="pe-7f-close"></i></a>
-							  			</td>
-							  		</tr>
-
-							  		<tr class="spacer"></tr>
-							  		<tr>
-							  			<td>
-							  				<div class="media">
-													<figure class="pull-left post__img">
-														<img class="media-object" src="img/post3.jpg" alt="user">
-													</figure>
-													<div class="media-body post_desc">
-														<h3>Wood Burning Logo</h3>
-														<p>A fresh looking wood...</p>
-														<button class="btn blue btn-sm">Edit</button>
-													</div>
-												</div>
-							  			</td>
-							  			<td>
-							  				<p class="post__date">19 Jan, 2014 <br>19:53</p>
-							  			</td>
-							  			<td class="not-padding">
-							  				<p class="post__info">A fresh looking wood burning psd logo mockup with a pyrogravure art style to create burn marks of your design…</p>
-							  			</td>
-							  			<td>
-							  				<a href="#" onclick="return false;" class="post__del"><i class="pe-7f-close"></i></a>
+							  				<a href="#" onclick="return false;" class="post__del"><i class="pe-7s-check"></i></a>
 							  			</td>
 							  		</tr>
 

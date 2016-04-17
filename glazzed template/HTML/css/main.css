@@ -2396,7 +2396,7 @@ a.btn-circle:hover, button.btn-circle:hover {
 .btn.violet {
   border-color: #989cff;
 }
-.btn.violet:hover, .dropdown.open .btn.violet, .btn.violet.inverse {
+.btn.violet:hover, .dropdown.open, .btn.violet, .btn.violet.inverse {
   background-color: #989cff;
 }
 .btn.violet:focus, .btn-group .btn.violet:active, .btn-group .btn.violet:focus {
