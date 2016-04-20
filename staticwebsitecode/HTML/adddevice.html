@@ -15,6 +15,8 @@
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.min.css">
+
+	<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
 	
 	<!-- Pixeden Icon Fonts -->
 	<link rel="stylesheet" type="text/css" href="css/pe-icon-7-filled.css">
@@ -23,6 +25,16 @@
 <body>
 
 <div class="row">
+
+				<header class="top-bar">
+					<ul class="profile">
+						<li>
+							<a href="index.html" style= class="btn-circle no-circle">
+								<i class="pe-7f-back"></i>
+							</a>
+						</li>
+					</ul>
+				</header>
 
 					<div class="col-md-6">
 						<article class="widget widget__form">
@@ -37,10 +49,12 @@
 							</header>
 
 							<div class="widget__content">
-								<input type="text" placeholder="Serial Number">
-								<input type="text" placeholder="Hours In Use">
-								<input type="text" placeholder="Status">
-								<button onclick=<a href="index.html">Add Device</button></a>
+							<form name="adddevice">
+								<input type="text" id= "serialnumber" name="serialnumber" placeholder="Serial Number"/>
+								<input type="text" id="hours" name="hours" placeholder="Hours In Use"/>
+								<input type="text" id="status" name="status" placeholder="Status"/>
+								</label><button onclick = "AddData()">Send</button>
+							</form>
 							</div>
 						</div>
 						</article>
