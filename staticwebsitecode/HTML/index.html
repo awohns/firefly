@@ -21,6 +21,29 @@
 	<link rel="stylesheet" type="text/css" href="css/pe-icon-7-stroke.css">
 
 	<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+
+        $("#adddevicebtn").click(function() {
+            $("#deviceform").show();
+
+            e.preventDefault();
+        });
+    });
+
+		function AddData(){
+        var serialnumber = document.getElementById("serialnumber").value;
+        var hours = document.getElementById("hours").value;
+		var status = document.getElementById("status").value;
+        var rows = "";
+
+            rows += "<tr class='spacer'></tr><tr><td><div class='media'><figure class='pull-left post__img'><img class='media-object' src='img/device.jpg' alt='user'></figure><div class='media-body post_desc'><h3>Firefly</h3><p>Serial #" + serialnumber +"</p></div></div></td><td><p class='post__date'>" + hours + "</p></td><td class='not-padding'><p class='post__info'>" + status + "</p></td><td><a href='#'' onclick='return false;'' class='post__del'><i class='pe-7s-check'></i></a></td></tr>";
+            $(rows).appendTo("#devices tbody");
+        }   
+
+	</script>
 </head>
 <body>
 	<div id="loading">
@@ -738,13 +761,13 @@
 							<header class="widget__header one-btn">
 								<div class="widget__title">
 									<i class="pe-7f-menu"></i><h3>Devices</h3>
-									<a href="adddevice.html"><button style="float:right;" class="btn blue">Add Device</button></a>
+									<button id="adddevicebtn" style="float:right;" class="btn blue">Add Device</button>
 								</div>
 							</header>
 							
 							<div class="widget__content table-responsive">
 								
-								<table class="table table-striped media-table">
+								<table id="devices" class="table table-striped media-table">
 							  	<thead>
 							  		<tr>
 							  			<th width="270">Inventory</th>
@@ -1038,7 +1061,29 @@
 
 		</section> <!-- /content -->
 
-		
+			        <div id="deviceform" class="col-md-6">
+						<article class="widget widget__form">
+							<header class="widget__header">
+								<div class="widget__title">
+									<i class="pe-7s-menu"></i><h3>Input New Device</h3>
+								</div>
+								<div class="widget__config">
+									<a href="#"><!-- <i class="pe-7f-refresh"></i> --></a>
+									<a href="#"><i class="pe-7s-close"></i></a>
+								</div>
+							</header>
+
+							<div class="widget__content">
+							<form name="adddevice">
+								<input type="text" id= "serialnumber" name="serialnumber" placeholder="Serial Number"/>
+								<input type="text" id="hours" name="hours" placeholder="Hours In Use"/>
+								<input type="text" id="status" name="status" placeholder="Status"/>
+								<input id = "button" type = "button" class="btn blue" value = " Add Device " onclick = "AddData()"/>
+							</form>
+							</div>
+						</div>
+						</article>
+					</div>
 
 	</div>
 
