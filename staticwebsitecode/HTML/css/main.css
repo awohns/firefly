@@ -342,10 +342,12 @@ body {
   color: rgba(255, 255, 255, 0.9);
   font-weight: 300;
 }
+
 body.bg1 {
   background: url(../img/bg.jpg);
   background-size: cover;
 }
+
 body.bg2 {
   background: url(../img/bg2.jpg);
   background-size: cover;
