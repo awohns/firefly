@@ -24,15 +24,6 @@
 
 	<script type="text/javascript">
 
-	$(document).ready(function(){
-
-        $("#adddevicebtn").click(function() {
-            $("#deviceform").show();
-
-            e.preventDefault();
-        });
-    });
-
 		function AddData(){
         var serialnumber = document.getElementById("serialnumber").value;
         var hours = document.getElementById("hours").value;
@@ -761,7 +752,6 @@
 							<header class="widget__header one-btn">
 								<div class="widget__title">
 									<i class="pe-7f-menu"></i><h3>Devices</h3>
-									<button id="adddevicebtn" style="float:right;" class="btn blue">Add Device</button>
 								</div>
 							</header>
 							
