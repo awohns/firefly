@@ -7,8 +7,12 @@
 
     <style>
       #map {
-        width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+        
+        width: 1000px;
         height: 400px;
+
       }
     </style>
   <meta charset="UTF-8">
@@ -429,7 +433,16 @@
           center: {lat: 44.540, lng: -78.546},
           zoom: 8
         });
+        var myLatLng = {lat: -25.363, lng: 131.044};
+        var image  = "http://www.ucronia.net/project/images/yellowdot.png"
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!',
+          icon: image
+        });
       }
+    
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
         async defer></script>
