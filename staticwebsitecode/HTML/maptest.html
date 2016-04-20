@@ -1,0 +1,465 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+      #map {
+        width: 500px;
+        height: 400px;
+      }
+    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firefly Dashboard</title>
+  
+  <!--<link rel="icon" sizes="192x192" href="img/touch-icon.png" /> 
+  <link rel="apple-touch-icon" href="img/touch-icon-iphone.png" /> 
+  <link rel="apple-touch-icon" sizes="76x76" href="img/touch-icon-ipad.png" /> 
+  <link rel="apple-touch-icon" sizes="120x120" href="img/touch-icon-iphone-retina.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="img/touch-icon-ipad-retina.png" />
+  -->
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.min.css">
+  
+  <!-- Pixeden Icon Fonts -->
+  <link rel="stylesheet" type="text/css" href="css/pe-icon-7-filled.css">
+  <link rel="stylesheet" type="text/css" href="css/pe-icon-7-stroke.css">
+</head>
+<body>
+  <div id="loading">
+    <div class="loader loader-light loader-large"></div>
+  </div>
+  <header class="top-bar">
+    
+    <!--
+    <ul class="profile"> 
+      <li>
+        <a href="#" class="btn-circle no-circle">
+          <i class="pe-7f-back"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="return false;" class="btn-circle btn-sm">
+          <i class="pe-7f-mail"></i>
+          <span class="badge badge--blue">8</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="return false;" class="btn-circle btn-sm">
+          <i class="pe-7g-sets"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="return false;" class="btn-circle btn-sm active">
+          <i class="pe-7g-user"></i>
+        </a>
+      </li>
+      <li class="mobile-nav">
+        <a href="#" onclick="return false;" class="btn-circle btn-sm">
+          <i class="pe-7f-menu"></i>
+        </a>
+      </li>
+    </ul>
+
+    <!--
+    <div class="main-search">
+      <input type="text" placeholder="Search ..." id="msearch">
+      <label for="msearch">
+        <i class="pe-7s-search"></i>
+      </label>
+      <button>
+        <i class="pe-7g-arrow-circled pe-rotate-90"></i>
+      </button>
+    </div>
+    
+    <div class="main-brand">
+      <div class="main-brand__container">
+        <div class="main-logo"><img src="img/logo.png"></div>
+        <input type="checkbox" id="s-logo" class="sw" />
+        <label class="swtc swtc--dark swtc--header" for="s-logo"></label> 
+      </div>
+    </div>
+    
+  </header> <!-- /top-bar -->
+
+<!-- <<<<<<< Updated upstream -->
+
+  <!--
+=======
+<!--
+>>>>>>> Stashed changes
+  <div class="wrapper">
+
+    <aside class="sidebar">
+-->
+      <!--
+      <div class="user-info">
+          <figure class="rounded-image profile__img">
+=======
+      <div class="user-info"> -->
+          <!-- <figure class="rounded-image profile__img">
+>>>>>>> Stashed changes
+            <img class="media-object" src="img/profile.jpg" alt="user">
+          </figure>
+          -->
+          <!--
+          <h2 class="user-info__name">Danica Kumara</h2>
+          <h3 class="user-info__role">Admin Manager</h3>
+<<<<<<< Updated upstream
+          <ul class="user-info__numbers">    </ul>
+        -->
+<!--
+=======
+          <ul class="user-info__numbers">    </ul> -->
+          <!--<ul class="user-info__numbers">
+            <li>
+              <i class="pe-7f-user"></i>
+              <p>26k+</p>
+              <p>+14</p>
+            </li>
+            <li>
+              <i class="pe-7f-paper-plane"></i>
+              <p>1095+</p>
+              <p>+56</p>
+            </li>
+            <li>
+              <i class="pe-7g-watch"></i>
+              <p>428</p>
+              <p>+38</p>
+            </li>
+          </ul>
+        -->
+        </div> <!-- /user-info -->
+        <!--
+        <ul class="main-nav">
+          <li class="main-nav--active">
+            <a class="main-nav__link" href="#">
+              <span class="main-nav__icon"><i class="pe-7f-home"></i></span>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a class="main-nav__link" href="ui.html">
+              <span class="main-nav__icon"><i class="pe-7f-edit"></i></span>
+              UI Elements
+            </a>
+          </li>
+          <li class="main-nav--collapsible">
+            <a class="main-nav__link" href="#" onclick="return false;">
+              <span class="main-nav__icon"><i class="pe-7f-monitor"></i></span>
+              Sample pages <span class="badge badge--line badge--blue">2</span>
+            </a>
+            <ul class="main-nav__submenu">
+              <li><a href="404.html"><span>Error 404</span></a></li>
+              <li><a href="login.html"><span>Login</span></a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="main-nav__link" href="grid.html">
+              <span class="main-nav__icon"><i class="pe-7f-browser"></i></span>
+              Grid Layout 
+            </a>
+          </li>
+          <li>
+            <a class="main-nav__link" href="tables.html">
+              <span class="main-nav__icon"><i class="pe-7f-note"></i></span>
+              Tables &amp; forms
+            </a>
+          </li>
+          <li>
+            <a class="main-nav__link" href="stats.html">
+              <span class="main-nav__icon"><i class="pe-7f-graph3"></i></span>
+              Statistics
+            </a>
+          </li>
+        </ul> <!-- /main-nav --> 
+
+      
+    </aside> <!-- /sidebar -->
+
+    
+    <section class="content">
+      <header class="main-header">
+        <div class="main-header__nav">
+          <h1 class="main-header__title">
+            <i class="pe-7f-home"></i>
+            <span>Firefly Dashboard</span>
+          </h1>
+          <!--
+          <ul class="main-header__breadcrumb">
+            <li><a href="#" onclick="return false;">Home</a></li>
+            <li><a href="#" onclick="return false;">Dashboard</a></li>
+            <li class="active"><a href="#" onclick="return false;">Sample Pages</a></li>
+          </ul>
+        -->
+        </div>
+        
+        <div class="main-header__date">
+          <input type="radio" id="radio_date_1" name="tab-radio" value="today" checked><!--
+          --><label class="fixed-width" for="radio_date_1">Last year</label><!--
+          --><input type="radio" id="radio_date_2" name="tab-radio" value="yesterday"><!--
+          --><label class="fixed-width" for="radio_date_2">Last month</label><!--
+          -->
+        <span class="dropdown open">
+          <label class="fixed-width" for="radio_date_2"></label>
+          <button class="btn btn-block violet dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+            Sort Region
+            <span class="caret">
+              <i class="pe-7g-arrow2-down"></i>
+            </span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Myanmar</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sub-Saharan Africa</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Haiti</a></li>
+              </ul>
+        </span>
+        </div>
+
+
+
+
+  <!--        <button>
+            <i class="pe-7f-date"></i>
+            <span>Select Region</span>
+          </button> -->
+        </div>
+      </header> <!-- /main-header -->
+
+      <div data-tab-radio="tab-radio" class="tab-radio-content row" id="today">
+          <div class="main-stats__stat col-md-3 col-sm-3">
+            <h3 >
+            <h3 class="main-stats__title" >
+                
+                
+                  St. Boniface Hospital
+               
+            
+              </h3>
+            <p class="main-stats__resume">Located in Fond-des-Blancs, Haiti. <br> District-level hospital. <br> Trained personnel on site.</p>
+            
+          </div> <!-- /col -->
+          
+          <div class="main-stats__stat col-md-3 col-sm-3 col-xs-4">
+            <div class="stat-circle">
+              <h3>16</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92">
+                <circle style="opacity:0.16;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="46" cy="46" r="45"/>
+                <path style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" d="M84.839,68.718C88.749,62.049,91,54.289,91,46C91,21.147,70.853,1,46,1"/>
+              </svg>
+            </div> <!-- /stat-circle -->
+            <h4 class="main-stats__subtitle">Fireflies<br> In Use<br>
+              <span class="main-stats__resume">+ 43%</span>
+            </h4>
+          </div> <!-- /col -->
+
+          <div class="main-stats__stat col-md-3 col-sm-3 col-xs-4">
+            <div class="stat-circle">
+              <h3>194</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92">
+              <circle style="opacity:0.16;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="46" cy="46" r="45"/>
+              <path style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" d="M6.185,66.968C13.725,81.256,28.721,91,46,91c24.853,0,45-20.147,45-45C91,21.147,70.853,1,46,1"/>
+              </svg>
+            </div> <!-- /stat-circle -->
+            <h4 class="main-stats__subtitle">Babies<br> Treated<br>
+              <span class="main-stats__resume">+ 65%</span>
+            </h4>
+
+          </div> <!-- /col -->
+
+          <div class="main-stats__stat col-md-3 col-sm-3 col-xs-4">
+            <div class="stat-circle">
+              <h3>76</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92">
+                <circle style="opacity:0.16;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="46" cy="46" r="45"/>
+                <path style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" d="M91,46C91,21.147,70.853,1,46,1"/>
+              </svg>
+            </div> <!-- /stat-circle -->
+            <h4 class="main-stats__subtitle">Devices<br> Repaired<br>
+              <span class="main-stats__resume">+ 25%</span>
+            </h4>
+          </div> <!-- /col -->
+
+        </div> <!-- row -->
+
+        <div data-tab-radio="tab-radio" class="tab-radio-content row" id="yesterday">
+          <div class="main-stats__stat col-md-3 col-sm-3">
+            <h3 class="main-stats__title">St. Boniface Hospital</h3>
+            <p class="main-stats__resume">Located in Fond-des-Blancs, Haiti. <br> District-level hospital. <br> Trained personnel on site.</p>
+            
+          </div> <!-- /col -->
+          
+          <div class="main-stats__stat col-md-3 col-sm-3 col-xs-4">
+            <div class="stat-circle">
+              <h3>19</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92">
+                <circle style="opacity:0.16;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="46" cy="46" r="45"/>
+                <path style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" d="M84.839,68.718C88.749,62.049,91,54.289,91,46C91,21.147,70.853,1,46,1"/>
+              </svg>
+            </div> <!-- /stat-circle -->
+            <h4 class="main-stats__subtitle">Fireflies<br> In Use<br>
+              <span class="main-stats__resume">+ 49%</span>
+            </h4>
+          </div> <!-- /col -->
+
+          <div class="main-stats__stat col-md-3 col-sm-3 col-xs-4">
+            <div class="stat-circle">
+              <h3>184</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92">
+              <circle style="opacity:0.16;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="46" cy="46" r="45"/>
+              <path style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" d="M6.185,66.968C13.725,81.256,28.721,91,46,91c24.853,0,45-20.147,45-45C91,21.147,70.853,1,46,1"/>
+              </svg>
+            </div> <!-- /stat-circle -->
+            <h4 class="main-stats__subtitle">Babies<br> Treated<br>
+              <span class="main-stats__resume">+ 61%</span>
+            </h4>
+
+          </div> <!-- /col -->
+
+          <div class="main-stats__stat col-md-3 col-sm-3 col-xs-4">
+            <div class="stat-circle">
+              <h3>52</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92">
+                <circle style="opacity:0.16;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="46" cy="46" r="45"/>
+                <path style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" d="M91,46C91,21.147,70.853,1,46,1"/>
+              </svg>
+            </div> <!-- /stat-circle -->
+            <h4 class="main-stats__subtitle">Devices<br> Repaired<br>
+              <span class="main-stats__resume">+ 15%</span>
+            </h4>
+          </div> <!-- /col -->
+
+        </div> <!-- row -->
+
+
+        <div class="row">
+          
+          <div class="col-md-7">
+            <article class="widget">
+              <header class="widget__header">
+                <div class="widget__title">
+                  <i class="pe-7f-graph3"></i><h3>Hours of Usage</h3>
+                </div>
+                <div class="widget__config">
+                  <a href="#"><i class="pe-7f-refresh"></i></a>
+                  <a href="#"><i class="pe-7s-close"></i></a>
+                </div>
+              </header>
+
+              <div class="widget__content filled">
+                <p class="graph-number"><span>873</span> Babies Admitted</p>
+                <div id="chartdiv" style="width: 100%; height: 388px;"></div>
+
+              </div>
+            </article><!-- /widget -->
+          </div>
+
+          <div class="col-md-5">
+            <article class="widget">
+              <header class="widget__header one-btn">
+                <div class="widget__title">
+                  <i class="pe-7f-speaker"></i>
+                  <h3>Alerts</h3>
+                </div>
+                <div class="widget__config">
+                  <a href="#"><i class="pe-7f-refresh"></i></a>
+                </div>
+              </header>
+              
+              <div class="widget__content">
+                
+                <div class="alert alert-fixed alert-success alert-dismissible" role="alert">
+                  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true"><i class="pe-7s-close"></i></span><span class="sr-only">Close</span></button>
+                  <div class="alert__icon pull-left">
+                    <i class="pe-7s-check"></i>
+                  </div>
+                  <p class="alert__text"> Device #236 Successfully Repaired<br> St. Jude's Hospital, Myanmar</p>
+                </div>
+                
+                <div class="alert alert-fixed alert-warning alert-dismissible" role="alert">
+                  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true"><i class="pe-7s-close"></i></span><span class="sr-only">Close</span></button>
+                  <div class="alert__icon pull-left">
+                    <i class="pe-7s-attention"></i>
+                  </div>
+                  <p class="alert__text"> Warning! Usage Low.<br> St. Boniface Hospital, Haiti</p>
+                </div>
+                
+                <div class="alert alert-fixed alert-info alert-dismissible" role="alert">
+                  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true"><i class="pe-7s-close"></i></span><span class="sr-only">Close</span></button>
+                  <div class="alert__icon pull-left">
+                    <i class="pe-7s-attention"></i>
+                  </div>
+                  <p class="alert__text"> Warning! Usage High. <br>Asia Royal Hospital, Myanmar</p>
+                </div>
+                
+                <div class="alert alert-fixed alert-danger alert-dismissible" role="alert">
+                  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true"><i class="pe-7s-close"></i></span><span class="sr-only">Close</span></button>
+                  <div class="alert__icon pull-left">
+                    <i class="pe-7s-close-circle"></i>
+                  </div>
+                  <p class="alert__text"> Error! Device #572 Broken. <br>Cure Children's Hospital, Uganda</p>
+                </div>
+                
+              </div> <!-- /widget__content -->
+
+            </article><!-- /widget -->
+          </div>
+
+
+        </div> <!-- /row -->
+
+
+            </article><!-- /widget -->
+          </div>
+
+      
+                
+
+  
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+          center: {lat: 44.540, lng: -78.546},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
+  
+
+                
+              </div> <!-- /widget__content -->
+
+            </article><!-- /widget -->
+          </div>
+
+        </div> <!-- /row -->
+
+
+
+  
+
+        </div> <!-- /row -->
+
+ 
+
+  </div>
+
+
+
+   
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/amcharts/amcharts.js"></script>
+  <script type="text/javascript" src="js/amcharts/serial.js"></script>
+  <script type="text/javascript" src="js/amcharts/pie.js"></script>
+  <script type="text/javascript" src="js/chart.js"></script>
+</body>
+</html>
