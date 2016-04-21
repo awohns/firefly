@@ -1,3 +1,19 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @awohns
+ Unwatch 4
+  Star 0
+ Fork 0 awohns/firefly
+ Code  Issues 0  Pull requests 0  Wiki  Pulse  Graphs  Settings
+Tree: 16e8f866bd Find file Copy pathfirefly/staticwebsitecode/HTML/maptest.html
+16e8f86  6 hours ago
+@awohns awohns added icons to website
+1 contributor
+RawBlameHistory     478 lines (395 sloc)  17.6 KB
 
 
 
@@ -6,31 +22,16 @@
 <head>
 
     <style>
-    /*  #map {
+      #map {
           margin-left: auto;
           margin-right: auto;
         
         width: 1000px;
         height: 400px;
-
-      }*/
-      .map-container {
-position: relative;
-padding-bottom: 26.25%;
-padding-top: 30px;
-height: 0;
-overflow: hidden;
-}
- 
-.map-container iframe,
-.map-container object,
-.map-container embed {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-}
+      }
+      #content {
+        color: black;
+      }
     </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +87,6 @@ height: 100%;
         </a>
       </li>
     </ul>
-
     <!--
     <div class="main-search">
       <input type="text" placeholder="Search ..." id="msearch">
@@ -115,7 +115,6 @@ height: 100%;
 <!--
 >>>>>>> Stashed changes
   <div class="wrapper">
-
     <aside class="sidebar">
 -->
       <!--
@@ -442,64 +441,123 @@ height: 100%;
                 
 
   
-   <!--  <div id="map"></div> -->
-
-
-<!-- THIS IS ALL THE MAP RESIZING STUFF THAT WORKSSSSS-->
-<div class="map-container">
-<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
-  src="https://www.google.com/maps/embed/v1/search?key=AIzaSyB6QX14zRXsIxRrwtgyympQiOluyJIX4kg&q=Haiti" >></iframe>
-</div>
+    <div id="map"></div>
     <script>
+      function initMap() {
+        var myLatLng = {lat:8.7832, lng:34.5085};
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+          center: myLatLng,
+          zoom: 2
+        });
+        
+        var image  = "http://www.ucronia.net/project/images/yellowdot.png"
+        // var marker = new google.maps.Marker({
+        //   position: myLatLng,
+        //   map: map,
+        //   title: 'Hello World!',
+        //   icon: image
+        // });
+        var ugandacontent = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Bunia General Hospital</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Bunia General Hospital has 5 firefly devices and is loacated in Uganda. ' +
+            
+            '<p> <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+          
+            '</div>'+
+            '</div>';
+        var uganda = {lat: 1.559304, lng: 30.164372}
+         var ugandawindow = new google.maps.InfoWindow({
+          content: ugandacontent
+        });
+        var marker2 = new google.maps.Marker({
+        
+          position: uganda,
+          map: map,
+          icon:image
+        });
 
-  
-function initialize() {
-    var mapOptions = {
-        zoom: 9,
-        center: new google.maps.LatLng(28.9285745, 77.09149350000007),
-        mapTypeId: google.maps.MapTypeId.TERRAIN
-     };
- 
-     var map = new google.maps.Map(document.getElementById('map-container'),
-mapOptions);
-     var myLatLng = {lat: -25.363, lng: 131.044};
-     var marker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-    });
-    
-     
-    
-    
+        var marker = new google.maps.Marker({
+          position: hanoi,
+          map: map,
+          title: 'Hanoi General Hospital',
+          icon: image
+        });
+        marker2.addListener('click', function() {
+          ugandawindow.open(map, marker2);
+        });  
+
+
+         var hanoi = {lat: 21.008470, lng: 105.484564};
+
+         var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Hanoi General Hospital</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Hanoi General Hospital has 10 firefly devices and is loacated in Vietnam. ' +
+            
+            '<p> <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+          
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+          position: hanoi,
+          map: map,
+          title: 'Hanoi General Hospital',
+          icon: image
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });  
+
+
+        //Haiti
+        var haiticontent = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">St. Boniface Hospital</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>St. Boniface  Hospital has 20 firefly devices and is loacated in Haiti. ' +
+            
+            '<p> <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+          
+            '</div>'+
+            '</div>';
+        var haiti = {lat:18.292751, lng:-73.136702}
+         var haitiwindow = new google.maps.InfoWindow({
+          content: haiticontent
+        });
+        var haitimarker = new google.maps.Marker({
+        
+          position: haiti,
+          map: map,
+          icon:image
+        });
+
+       
+        haitimarker.addListener('click', function() {
+          haitiwindow.open(map, haitimarker);
+        });  
+
+
+
 }
- 
-
-google.maps.event.addDomListener(window, 'resize', initialize);
-google.maps.event.addDomListener(window, 'load', initialize)
-
-
-//<!-- THIS IS the end of THE MAP RESIZING STUFF THAT WORKSSSSS-->
-
-      // function initMap() {
-      //   var mapDiv = document.getElementById('map');
-      //   var map = new google.maps.Map(mapDiv, {
-      //     center: {lat: 44.540, lng: -78.546},
-      //     zoom: 8
-      //   });
-      //   var myLatLng = {lat: -25.363, lng: 131.044};
-      //   var image  = "http://www.ucronia.net/project/images/yellowdot.png"
-      //   var marker = new google.maps.Marker({
-      //     position: myLatLng,
-      //     map: map,
-      //     title: 'Hello World!',
-      //     icon: image
-      //   });
-      // }
     
-</script>
-    <!-- <div id='location-canvas' style='width:100%;height:300px;'></div>
+    </script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
-        async defer></script> -->
+        async defer></script>
   
 
                 
@@ -530,3 +588,5 @@ google.maps.event.addDomListener(window, 'load', initialize)
   <script type="text/javascript" src="js/chart.js"></script>
 </body>
 </html>
+Status API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Contact Help
