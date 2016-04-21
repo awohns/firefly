@@ -444,7 +444,7 @@ RawBlameHistory     478 lines (395 sloc)  17.6 KB
     <div id="map"></div>
     <script>
       function initMap() {
-        var myLatLng = {lat: -25.363, lng: 131.044};
+        var myLatLng = {lat:8.7832, lng:34.5085};
         var mapDiv = document.getElementById('map');
         var map = new google.maps.Map(mapDiv, {
           center: myLatLng,
@@ -458,32 +458,52 @@ RawBlameHistory     478 lines (395 sloc)  17.6 KB
         //   title: 'Hello World!',
         //   icon: image
         // });
+        var ugandacontent = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Bunia General Hospital</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Bunia General Hospital has 5 firefly devices and is loacated in Uganda. ' +
+            
+            '<p> <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+          
+            '</div>'+
+            '</div>';
+        var uganda = {lat: 1.559304, lng: 30.164372}
+         var ugandawindow = new google.maps.InfoWindow({
+          content: ugandacontent
+        });
+        var marker2 = new google.maps.Marker({
+        
+          position: uganda,
+          map: map,
+          icon:image
+        });
 
-         var marker2 = new google.maps.Marker({
-        position: {lat:1.551067, lng:30.294835},
-        map: map,
-        icon:image
-      });
-         var uluru = {lat: -25.363, lng: 131.044};
+        var marker = new google.maps.Marker({
+          position: hanoi,
+          map: map,
+          title: 'Hanoi General Hospital',
+          icon: image
+        });
+        marker2.addListener('click', function() {
+          ugandawindow.open(map, marker2);
+        });  
+
+
+         var hanoi = {lat: 21.008470, lng: 105.484564};
 
          var contentString = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+            '<h1 id="firstHeading" class="firstHeading">Hanoi General Hospital</h1>'+
             '<div id="bodyContent">'+
-            '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-            'sandstone rock formation in the southern part of the '+
-            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-            'south west of the nearest large town, Alice Springs; 450&#160;km '+
-            '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-            'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-            'Aboriginal people of the area. It has many springs, waterholes, '+
-            'rock caves and ancient paintings. Uluru is listed as a World '+
-            'Heritage Site.</p>'+
-            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            '<p><b>Hanoi General Hospital has 10 firefly devices and is loacated in Vietnam. ' +
+            
+            '<p> <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
             'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-            '(last visited June 22, 2009).</p>'+
+          
             '</div>'+
             '</div>';
 
@@ -492,16 +512,47 @@ RawBlameHistory     478 lines (395 sloc)  17.6 KB
         });
 
         var marker = new google.maps.Marker({
-          position: uluru,
+          position: hanoi,
           map: map,
-          title: 'Uluru (Ayers Rock)',
+          title: 'Hanoi General Hospital',
           icon: image
         });
         marker.addListener('click', function() {
           infowindow.open(map, marker);
+        });  
+
+
+        //Haiti
+        var haiticontent = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">St. Boniface Hospital</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>St. Boniface  Hospital has 20 firefly devices and is loacated in Haiti. ' +
+            
+            '<p> <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+          
+            '</div>'+
+            '</div>';
+        var haiti = {lat:18.292751, lng:-73.136702}
+         var haitiwindow = new google.maps.InfoWindow({
+          content: haiticontent
         });
-      
+        var haitimarker = new google.maps.Marker({
         
+          position: haiti,
+          map: map,
+          icon:image
+        });
+
+       
+        haitimarker.addListener('click', function() {
+          haitiwindow.open(map, haitimarker);
+        });  
+
+
+
 }
     
     </script>
