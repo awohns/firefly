@@ -1,3 +1,19 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @awohns
+ Unwatch 4
+  Star 0
+ Fork 0 awohns/firefly
+ Code  Issues 0  Pull requests 0  Wiki  Pulse  Graphs  Settings
+Tree: 16e8f866bd Find file Copy pathfirefly/staticwebsitecode/HTML/maptest.html
+16e8f86  6 hours ago
+@awohns awohns added icons to website
+1 contributor
+RawBlameHistory     478 lines (395 sloc)  17.6 KB
 
 
 
@@ -6,31 +22,13 @@
 <head>
 
     <style>
-    /*  #map {
+      #map {
           margin-left: auto;
           margin-right: auto;
         
         width: 1000px;
         height: 400px;
-
-      }*/
-      .map-container {
-position: relative;
-padding-bottom: 26.25%;
-padding-top: 30px;
-height: 0;
-overflow: hidden;
-}
- 
-.map-container iframe,
-.map-container object,
-.map-container embed {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-}
+      }
     </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +84,6 @@ height: 100%;
         </a>
       </li>
     </ul>
-
     <!--
     <div class="main-search">
       <input type="text" placeholder="Search ..." id="msearch">
@@ -115,7 +112,6 @@ height: 100%;
 <!--
 >>>>>>> Stashed changes
   <div class="wrapper">
-
     <aside class="sidebar">
 -->
       <!--
@@ -442,64 +438,70 @@ height: 100%;
                 
 
   
-   <!--  <div id="map"></div> -->
-
-
-<!-- THIS IS ALL THE MAP RESIZING STUFF THAT WORKSSSSS-->
-<div class="map-container">
-<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
-  src="https://www.google.com/maps/embed/v1/search?key=AIzaSyB6QX14zRXsIxRrwtgyympQiOluyJIX4kg&q=Haiti" >></iframe>
-</div>
+    <div id="map"></div>
     <script>
+      function initMap() {
+        var myLatLng = {lat: -25.363, lng: 131.044};
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+          center: myLatLng,
+          zoom: 2
+        });
+        
+        var image  = "http://www.ucronia.net/project/images/yellowdot.png"
+        // var marker = new google.maps.Marker({
+        //   position: myLatLng,
+        //   map: map,
+        //   title: 'Hello World!',
+        //   icon: image
+        // });
 
-  
-function initialize() {
-    var mapOptions = {
-        zoom: 9,
-        center: new google.maps.LatLng(28.9285745, 77.09149350000007),
-        mapTypeId: google.maps.MapTypeId.TERRAIN
-     };
- 
-     var map = new google.maps.Map(document.getElementById('map-container'),
-mapOptions);
-     var myLatLng = {lat: -25.363, lng: 131.044};
-     var marker = new google.maps.Marker({
-        position: myLatLng,
+         var marker2 = new google.maps.Marker({
+        position: {lat:1.551067, lng:30.294835},
         map: map,
-    });
-    
-     
-    
-    
+        icon:image
+      });
+
+         var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+      'sandstone rock formation in the southern part of the '+
+      'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+      'south west of the nearest large town, Alice Springs; 450&#160;km '+
+      '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+      'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+      'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+      'Aboriginal people of the area. It has many springs, waterholes, '+
+      'rock caves and ancient paintings. Uluru is listed as a World '+
+      'Heritage Site.</p>'+
+      '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+      'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+      '(last visited June 22, 2009).</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Uluru (Ayers Rock)',
+    icon: image,
+  });
+
+  marker.addListener('click', function() {
+    infowindow.open(map, marker2);
+  });
 }
- 
-
-google.maps.event.addDomListener(window, 'resize', initialize);
-google.maps.event.addDomListener(window, 'load', initialize)
-
-
-//<!-- THIS IS the end of THE MAP RESIZING STUFF THAT WORKSSSSS-->
-
-      // function initMap() {
-      //   var mapDiv = document.getElementById('map');
-      //   var map = new google.maps.Map(mapDiv, {
-      //     center: {lat: 44.540, lng: -78.546},
-      //     zoom: 8
-      //   });
-      //   var myLatLng = {lat: -25.363, lng: 131.044};
-      //   var image  = "http://www.ucronia.net/project/images/yellowdot.png"
-      //   var marker = new google.maps.Marker({
-      //     position: myLatLng,
-      //     map: map,
-      //     title: 'Hello World!',
-      //     icon: image
-      //   });
-      // }
     
-</script>
-    <!-- <div id='location-canvas' style='width:100%;height:300px;'></div>
+    </script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
-        async defer></script> -->
+        async defer></script>
   
 
                 
@@ -530,3 +532,5 @@ google.maps.event.addDomListener(window, 'load', initialize)
   <script type="text/javascript" src="js/chart.js"></script>
 </body>
 </html>
+Status API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Contact Help
