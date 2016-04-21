@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	 <style>
+      #map {
+          margin-left: auto;
+          margin-right: auto;
+        
+        width: 1000px;
+        height: 400px;
+      }
+      #content {
+        color: black;
+      }
+    </style>
 	<meta charset="UTF-8">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Firefly Dashboard</title>
 	
@@ -1091,6 +1104,124 @@
 							</div>
 						</div>
 						</article>
+						
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var myLatLng = {lat:8.7832, lng:34.5085};
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+          center: myLatLng,
+          zoom: 2
+        });
+        
+        var image  = "http://www.ucronia.net/project/images/yellowdot.png"
+        // var marker = new google.maps.Marker({
+        //   position: myLatLng,
+        //   map: map,
+        //   title: 'Hello World!',
+        //   icon: image
+        // });
+        var ugandacontent = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Bunia General Hospital</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Bunia General Hospital has 5 firefly devices and is loacated in Uganda. ' +
+            
+            '<p> <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+          
+            '</div>'+
+            '</div>';
+        var uganda = {lat: 1.559304, lng: 30.164372}
+         var ugandawindow = new google.maps.InfoWindow({
+          content: ugandacontent
+        });
+        var marker2 = new google.maps.Marker({
+        
+          position: uganda,
+          map: map,
+          icon:image
+        });
+
+        var marker = new google.maps.Marker({
+          position: hanoi,
+          map: map,
+          title: 'Hanoi General Hospital',
+          icon: image
+        });
+        marker2.addListener('click', function() {
+          ugandawindow.open(map, marker2);
+        });  
+
+
+         var hanoi = {lat: 21.008470, lng: 105.484564};
+
+         var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Hanoi General Hospital</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Hanoi General Hospital has 10 firefly devices and is loacated in Vietnam. ' +
+            
+            '<p> <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+          
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+          position: hanoi,
+          map: map,
+          title: 'Hanoi General Hospital',
+          icon: image
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });  
+
+
+        //Haiti
+        var haiticontent = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">St. Boniface Hospital</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>St. Boniface  Hospital has 20 firefly devices and is loacated in Haiti. ' +
+            
+            '<p> <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+          
+            '</div>'+
+            '</div>';
+        var haiti = {lat:18.292751, lng:-73.136702}
+         var haitiwindow = new google.maps.InfoWindow({
+          content: haiticontent
+        });
+        var haitimarker = new google.maps.Marker({
+        
+          position: haiti,
+          map: map,
+          icon:image
+        });
+
+       
+        haitimarker.addListener('click', function() {
+          haitiwindow.open(map, haitimarker);
+        });  
+
+
+
+}
+    
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
 					</div>
 
 	</div>
