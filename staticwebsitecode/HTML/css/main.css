@@ -977,7 +977,7 @@ hr {
 }
 .widget__config a .pe-7s-close {
   font-size: 1.5em;
-/*  display: inline-block;*/
+  display: inline-block;
   padding-top: 20px;
 }
 
