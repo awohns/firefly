@@ -19,6 +19,49 @@
 	<!-- Pixeden Icon Fonts -->
 	<link rel="stylesheet" type="text/css" href="css/pe-icon-7-filled.css">
 	<link rel="stylesheet" type="text/css" href="css/pe-icon-7-stroke.css">
+	<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+
+	<script type="text/javascript">
+
+		function AddData(){
+        var serialnumber = document.getElementById("serialnumber").value;
+        var hours = document.getElementById("hours").value;
+		var status = document.getElementById("status").value;
+        var rows = "";
+
+            rows += "<tr class='spacer'></tr><tr><td><div class='media'><figure class='pull-left post__img'><img class='media-object' src='img/device.jpg' alt='user'></figure><div class='media-body post_desc'><h3>Firefly</h3><p>Serial #" + serialnumber +"</p></div></div></td><td><p class='post__date'>" + hours + "</p></td><td class='not-padding'><p class='post__info'>" + status + "</p></td><td><a href='#'' onclick='return false;'' class='post__del'><i class='pe-7s-check'></i></a></td></tr>";
+            $(rows).appendTo("#devices tbody");
+        }   
+
+        function addBabies1() {
+			    // fetch the element :
+			   var element = document.getElementById('number1'); 
+
+			   // get the attribute, parse it and increment it :
+			   value = parseInt(element.getAttribute('value'), 10)+1; 
+
+			   // stores the incremented value :
+			   element.setAttribute('value', value);
+
+			   // and change the innerHTML (conversion to string is implicit)
+			   element.innerHTML = value;
+		}
+
+		function addBabies2() {
+			    // fetch the element :
+			   var element = document.getElementById('number2'); 
+
+			   // get the attribute, parse it and increment it :
+			   value = parseInt(element.getAttribute('value'), 10)+1; 
+
+			   // stores the incremented value :
+			   element.setAttribute('value', value);
+
+			   // and change the innerHTML (conversion to string is implicit)
+			   element.innerHTML = value;
+		}
+
+	</script>
 </head>
 <body>
 	<div id="loading">
@@ -195,14 +238,14 @@
 					--><input type="radio" id="radio_date_2" name="tab-radio" value="yesterday"><!--
 					--><label class="fixed-width" for="radio_date_2">Last month</label><!--
 					-->
-				<span class="dropdown open">
+				<span class="dropdown closed">
 				  <label class="fixed-width" for="radio_date_2"></label>
 				  <button class="btn btn-block violet dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
 				    Sort By
 				    <span class="caret">
 				    	<i class="pe-7g-arrow2-down"></i>
 				    </span>
-						  </button>
+					</button>
 
 						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
 						    <li role="presentation"><a role="menuitem" tabindex="-1" href="hospital.html">St. Boniface</a></li>
@@ -230,6 +273,21 @@
 				  
 				  <div class="main-stats__stat col-md-3 col-sm-3 col-xs-4">
 						<div class="stat-circle">
+							<h3 id="number1" value="194">194</h3>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92">
+							<circle style="opacity:0.16;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="46" cy="46" r="45"/>
+							<path style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" d="M6.185,66.968C13.725,81.256,28.721,91,46,91c24.853,0,45-20.147,45-45C91,21.147,70.853,1,46,1"/>
+							</svg>
+						</div> <!-- /stat-circle -->
+						<h4 class="main-stats__subtitle">Babies<br> Treated<br>
+							<!-- <span class="main-stats__resume">+ 65%</span> -->
+							<button class="btn white fixed" onclick="addBabies1()">+ Add</button>
+						</h4>
+
+					</div> <!-- /col -->
+
+					<div class="main-stats__stat col-md-3 col-sm-3 col-xs-4">
+						<div class="stat-circle">
 							<h3>16</h3>
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92">
 								<circle style="opacity:0.16;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="46" cy="46" r="45"/>
@@ -237,22 +295,8 @@
 							</svg>
 						</div> <!-- /stat-circle -->
 						<h4 class="main-stats__subtitle">Fireflies<br> In Use<br>
-							<span class="main-stats__resume">+ 43%</span>
+							<!-- <span class="main-stats__resume">+ 43%</span> -->
 						</h4>
-					</div> <!-- /col -->
-
-					<div class="main-stats__stat col-md-3 col-sm-3 col-xs-4">
-						<div class="stat-circle">
-							<h3>194</h3>
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92">
-							<circle style="opacity:0.16;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="46" cy="46" r="45"/>
-							<path style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" d="M6.185,66.968C13.725,81.256,28.721,91,46,91c24.853,0,45-20.147,45-45C91,21.147,70.853,1,46,1"/>
-							</svg>
-						</div> <!-- /stat-circle -->
-						<h4 class="main-stats__subtitle">Babies<br> Treated<br>
-							<span class="main-stats__resume">+ 65%</span>
-						</h4>
-
 					</div> <!-- /col -->
 
 					<div class="main-stats__stat col-md-3 col-sm-3 col-xs-4">
@@ -264,7 +308,7 @@
 							</svg>
 						</div> <!-- /stat-circle -->
 						<h4 class="main-stats__subtitle">Devices<br> Repaired<br>
-							<span class="main-stats__resume">+ 25%</span>
+							<!-- <span class="main-stats__resume">+ 25%</span> -->
 						</h4>
 					</div> <!-- /col -->
 
@@ -292,14 +336,14 @@
 
 					<div class="main-stats__stat col-md-3 col-sm-3 col-xs-4">
 						<div class="stat-circle">
-							<h3>184</h3>
+							<h3 id="number2" value="184">184</h3>
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92">
 							<circle style="opacity:0.16;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="46" cy="46" r="45"/>
 							<path style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" d="M6.185,66.968C13.725,81.256,28.721,91,46,91c24.853,0,45-20.147,45-45C91,21.147,70.853,1,46,1"/>
 							</svg>
 						</div> <!-- /stat-circle -->
 						<h4 class="main-stats__subtitle">Babies<br> Treated<br>
-							<span class="main-stats__resume">+ 61%</span>
+							<button class="btn white fixed" onclick="addBabies2()">+ Add</button>
 						</h4>
 
 					</div> <!-- /col -->
@@ -736,13 +780,12 @@
 							<header class="widget__header one-btn">
 								<div class="widget__title">
 									<i class="pe-7f-menu"></i><h3>Devices</h3>
-									<a href="adddevice.html"><button style="float:right;" class="btn blue fixed">Add Device</button></a>
 								</div>
 							</header>
 							
 							<div class="widget__content table-responsive">
 								
-								<table class="table table-striped media-table">
+								<table id="devices" class="table table-striped media-table">
 							  	<thead>
 							  		<tr>
 							  			<th width="270">Inventory</th>
@@ -1035,6 +1078,30 @@
 
 
 		</section> <!-- /content -->
+
+		   <div id="deviceform" class="col-md-12">
+						<article class="widget widget__form">
+							<header class="widget__header">
+								<div class="widget__title">
+									<i class="pe-7s-menu"></i><h3>Input New Device</h3>
+								</div>
+								<div class="widget__config">
+									<a href="#"><!-- <i class="pe-7f-refresh"></i> --></a>
+									<a href="#"><i class="pe-7s-close"></i></a>
+								</div>
+							</header>
+
+							<div class="widget__content">
+							<form name="adddevice">
+								<input type="text" id= "serialnumber" name="serialnumber" placeholder="Serial Number"/>
+								<!-- <input type="text" id="hours" name="hours" placeholder="Hours In Use"/> -->
+								<input type="text" id="status" name="status" placeholder="Status"/>
+								<input id = "button" type = "button" class="btn blue" value = " Add Device " onclick = "AddData()"/>
+							</form>
+							</div>
+						</div>
+						</article>
+					</div>
 
 	</div>
 
