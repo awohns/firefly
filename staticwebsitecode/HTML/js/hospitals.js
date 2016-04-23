@@ -14,10 +14,19 @@ var devicesArray = JSON.parse(storedDevices);
 $(document).ready(function(){
 
  displayHospitals()
+
+
+ $("#hospitalsearch").keyup(function(event){
+    if(event.keyCode == 13){
+        doSearch("#q.value")
+        console.log('return worked')
+    }
+});
  })
 
 function displayHospitals() {
-  
+  if (hospitalsArray != null)
+  {
   for (var i = 0; i <= (hospitalsArray.length); i++)
   {
 
@@ -30,11 +39,19 @@ function displayHospitals() {
 
   	}
   }
+}
   
 function doSearch(s) {
     console.log("hi");
     var searchedhospitals = s  ;   
     console.log(searchedhospitals)    ;  
     localStorage.setItem('hospitals', JSON.stringify(searchedhospitals));
+    Redirect();
+
 }
+
+function Redirect() {
+	window.location= 'http:www.google.com'
+}
+
 
