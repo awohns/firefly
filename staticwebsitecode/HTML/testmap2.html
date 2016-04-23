@@ -122,8 +122,9 @@
         <div class="main-header__date">
          
            <!-- HTML for SEARCH BAR -->
-          <form id="tfnewsearch" method="get" action="http://www.google.com">
-            <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+          <form id="tfnewsearch" >
+            <input type="text" class="tftextinput" name="q" id='q' size="21" maxlength="120">
+            <input type="button" value="search" class="tfbutton" onclick=doSearch(this.text.q.value)>
     </form>
     <!-- <div class="tfclear"></div>
   </div> -->

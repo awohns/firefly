@@ -8,7 +8,9 @@ var hospitalsArray = JSON.parse(storedhospitals);
 var storedDevices = localStorage.getItem('devices');
 var devicesArray = JSON.parse(storedDevices);
 
-$(document).ready(function(){
+// $(document).ready(function(){
   
-
-  }
+function doSearch(s) {
+    console.log("hi")             // The function returns the product of p1 and p2
+}
+ // })
