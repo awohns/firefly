@@ -15,11 +15,7 @@
         color: black;
       }
       <!DOCTYPE html>
-<html>
-<head>
-<title>Search Box Example 1</title>
-<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
-<!-- CSS styles for standard search box -->
+
 <style type="text/css">
   #tfheader{
     background-color:#c3dfef;
@@ -36,6 +32,7 @@
     border:1px solid #0076a3; border-right:0px;
     border-top-left-radius: 5px 5px;
     border-bottom-left-radius: 5px 5px;
+    color: black;
   }
   .tfbutton {
     margin: 0;
@@ -83,7 +80,7 @@
   -->
 
 
-
+  <script src="js/hospitals.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -123,13 +120,13 @@
         </div>
         
         <div class="main-header__date">
-          <input type="radio" id="radio_date_1" name="tab-radio" value="today" checked><!--
-          --><label class="fixed-width" for="radio_date_1">Last year</label><!--
-          --><input type="radio" id="radio_date_2" name="tab-radio" value="yesterday"><!--
-          --><label class="fixed-width" for="radio_date_2">Last month</label>
+         
+           <!-- HTML for SEARCH BAR -->
           <form id="tfnewsearch" method="get" action="http://www.google.com">
             <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
     </form>
+    <!-- <div class="tfclear"></div>
+  </div> -->
           
 
         <span class="dropdown open">
@@ -147,7 +144,7 @@
               </ul>
         </span>
         </div>
-          <!-- HTML for SEARCH BAR -->
+         
   <!-- <div id="tfheader">
     <form id="tfnewsearch" method="get" action="http://www.google.com">
             <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
