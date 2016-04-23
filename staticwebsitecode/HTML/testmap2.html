@@ -118,12 +118,25 @@
           </ul>
         -->
         </div>
-        
+        <datalist id="languages">
+          <option value="HTML">
+          <option value="CSS">
+          <option value="JavaScript">
+          <option value="Java">
+          <option value="Ruby">
+          <option value="PHP">
+          <option value="Go">
+          <option value="Erlang">
+          <option value="Python">
+          <option value="C">
+          <option value="C#">
+          <option value="C++">
+        </datalist>
         <div class="main-header__date">
          
            <!-- HTML for SEARCH BAR -->
           <form id="tfnewsearch" >
-            <input type="text" class="tftextinput" name="q" id='q' size="21" maxlength="120">
+            <input type="text" list='languages' class="tftextinput" name="q" id='q' size="21" maxlength="120">
             <input type="button" value="search hospitals" class="tfbutton" onclick=doSearch(q.value)>
     </form>
     <!-- <div class="tfclear"></div>
