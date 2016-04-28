@@ -18,12 +18,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Firefly Dashboard</title>
 	
-	<!--<link rel="icon" sizes="192x192" href="img/touch-icon.png" /> 
-	<link rel="apple-touch-icon" href="img/touch-icon-iphone.png" /> 
-	<link rel="apple-touch-icon" sizes="76x76" href="img/touch-icon-ipad.png" /> 
-	<link rel="apple-touch-icon" sizes="120x120" href="img/touch-icon-iphone-retina.png" />
-	<link rel="apple-touch-icon" sizes="152x152" href="img/touch-icon-ipad-retina.png" />
-	-->
 	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -261,6 +255,47 @@
 					</button> -->
 				</div>
 			</header> <!-- /main-header -->
+
+			<!-- Button trigger modal -->
+<button type="button" class="btn blue" data-toggle="modal" data-target="#myModal">Launch demo modal</button>
+
+			<div class="row">
+				<div class="col-md-10">
+							<article class="widget">
+								<div class="tab-radio-full">
+									<input type="radio" id="tab_radio_1" name="tab-radio-2" value="tabr1" checked><!--
+								--><label for="tab_radio_1" class="btn-md">Step 1</label><!--
+								--><input type="radio" id="tab_radio_2" name="tab-radio-2" value="tabr2" ><!--
+								--><label for="tab_radio_2" class="btn-md">Step 2</label><!--
+								--><input type="radio" id="tab_radio_3" name="tab-radio-2" value="tabr3"><!--
+								--><label for="tab_radio_3" class="btn-md">Step 3</label><!--
+								--><input type="radio" id="tab_radio_4" name="tab-radio-2" value="tabr4"><!--
+								--><label for="tab_radio_4" class="btn-md">Final step</label>
+								</div>
+								<div data-tab-radio="tab-radio-2" class="tab-radio-content" id="tabr1">
+									<article class="widget__form">
+										<label for="input-1" class="stacked-label"><i class="pe-7f-user"></i></label><input type="text" class="stacked-input" id="input-1" placeholder="Name">
+										<label for="input-2" class="stacked-label"><i class="pe-7f-portfolio"></i></label><input type="text" class="stacked-input" id="input-2" placeholder="Company">
+									</article><!-- /widget -->
+								</div>
+								<div data-tab-radio="tab-radio-2" class="tab-radio-content" id="tabr2">
+									<article class="widget__form">
+										<label for="input-1" class="stacked-label"><i class="pe-7f-phone"></i></label><input type="text" class="stacked-input" id="input-1" placeholder="Phone number">
+										<label for="input-2" class="stacked-label"><i class="pe-7f-mail"></i></label><input type="text" class="stacked-input" id="input-2" placeholder="Email">
+									</article><!-- /widget -->
+								</div>
+								<div data-tab-radio="tab-radio-2" class="tab-radio-content" id="tabr3">
+									<article class="widget__form">
+										<label for="input-1" class="stacked-label"><i class="pe-7f-home"></i></label><input type="text" class="stacked-input" id="input-1" placeholder="Address">
+										<label for="input-2" class="stacked-label"><i class="pe-7f-credit"></i></label><input type="text" class="stacked-input" id="input-2" placeholder="Credit card">
+									</article><!-- /widget -->
+								</div>
+								<div data-tab-radio="tab-radio-2" class="tab-radio-content" id="tabr4">
+									<article class="widget__form">
+										<button onclick="return false;">Send</button>
+									</article><!-- /widget -->
+								</div>
+							</article><!-- /widget -->
 
 			<div data-tab-radio="tab-radio" class="tab-radio-content row" id="today">
 					<div class="main-stats__stat col-md-3 col-sm-3">
