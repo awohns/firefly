@@ -4128,9 +4128,9 @@ input[name^="tab-radio"]:checked + label {
     display: none;
   }
 
-  .main-search {
+/*  .main-search {
     left: 70px;
-  }
+  }*/
 
   .main-brand {
     width: calc(100% - 69px - 382px - 2px);
@@ -4200,7 +4200,7 @@ input[name^="tab-radio"]:checked + label {
     display: none;
   }
 
-  .main-search {
+  /*.main-search {
     padding-left: 50px;
   }
   .main-search input {
@@ -4212,7 +4212,7 @@ input[name^="tab-radio"]:checked + label {
   }
   .main-search label {
     left: 20px;
-  }
+  }*/
 
   .main-brand {
     width: calc(100% - 69px - 182px - 2px);

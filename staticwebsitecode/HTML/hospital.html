@@ -61,6 +61,14 @@
 			   element.innerHTML = value;
 		}
 
+		$(document).ready(function () {
+		    $(".btnlogsign").click(function () {
+		        $('html,body').animate({
+		            scrollTop: $("#devicetable").offset().top
+		        }, 'slow');
+		    });
+		});
+
 	</script>
 </head>
 <body>
@@ -231,33 +239,13 @@
 					</ul>
 				-->
 				</div>
-				
-				<div class="main-header__date">
-					<input type="radio" id="radio_date_1" name="tab-radio" value="today" checked><!--
-					--><label class="fixed-width" for="radio_date_1">Last year</label><!--
-					--><input type="radio" id="radio_date_2" name="tab-radio" value="yesterday"><!--
-					--><label class="fixed-width" for="radio_date_2">Last month</label><!--
-					-->
-				<span class="dropdown closed">
-				  <label class="fixed-width" for="radio_date_2"></label>
-				  <button class="btn btn-block violet dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
-				    Select View
-				    <span class="caret">
-				    	<i class="pe-7g-arrow2-down"></i>
-				    </span>
-					</button>
 
-						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
-						  	<li role="presentation"><a role="menuitem" tabindex="-1" href="index.html">All Hospitals</a></li>
-						    <li role="presentation"><a role="menuitem" tabindex="-1" href="hospital.html">St. Boniface</a></li>
-
-						  </ul>
-				</span>
 				<span class="main-header__date">
 						<input type="radio" id="radio_date_1" name="tab-radio" value="today" checked>
 						<label class="fixed-width" for="radio_date_1" onclick="window.location.href = 'home.html'">Log Out</label>
 					</span>
 				</div>
+
 
 
 
@@ -271,8 +259,19 @@
 
 			<div data-tab-radio="tab-radio" class="tab-radio-content row" id="today">
 					<div class="main-stats__stat col-md-3 col-sm-3">
-						<h3 class="main-stats__title">St. Boniface Hospital</h3>
-						<p class="main-stats__resume">Located in Fond-des-Blancs, Haiti. <br> District-level hospital. <br> Trained personnel on site.</p>
+						<span class="dropdown closed">
+				  			<label class="fixed-width" for="radio_date_2"></label>
+				 			<button class="btn btn-lg btn-block violet dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+				    		St. Boniface Hospital
+						</button>
+
+						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+						  	<li role="presentation"><a role="menuitem" tabindex="-1" href="index.html">All Hospitals</a></li>
+						    <li role="presentation"><a role="menuitem" tabindex="-1" href="hospital.html">St. Boniface</a></li>
+
+						  </ul>
+				</span>
+						
 						
 					</div> <!-- /col -->
 				  
@@ -284,9 +283,7 @@
 							<path style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" d="M6.185,66.968C13.725,81.256,28.721,91,46,91c24.853,0,45-20.147,45-45C91,21.147,70.853,1,46,1"/>
 							</svg>
 						</div> <!-- /stat-circle -->
-						<h4 class="main-stats__subtitle">Babies<br> Admitted<br>
-							<!-- <span class="main-stats__resume">+ 65%</span> -->
-							<button class="btn white fixed" onclick="addBabies1()">+ Add</button>
+						<h4 class="main-stats__subtitle">Fireflies<br> Used<br>
 						</h4>
 
 					</div> <!-- /col -->
@@ -299,7 +296,7 @@
 								<path style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" d="M84.839,68.718C88.749,62.049,91,54.289,91,46C91,21.147,70.853,1,46,1"/>
 							</svg>
 						</div> <!-- /stat-circle -->
-						<h4 class="main-stats__subtitle">Fireflies<br> In Use<br>
+						<h4 class="main-stats__subtitle">Fireflies<br> On Now<br>
 							<!-- <span class="main-stats__resume">+ 43%</span> -->
 						</h4>
 					</div> <!-- /col -->
@@ -312,7 +309,7 @@
 								<path style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" d="M91,46C91,21.147,70.853,1,46,1"/>
 							</svg>
 						</div> <!-- /stat-circle -->
-						<h4 class="main-stats__subtitle">Devices<br> Repaired<br>
+						<h4 class="main-stats__subtitle">Nearby<br> Hospitals<br>
 							<!-- <span class="main-stats__resume">+ 25%</span> -->
 						</h4>
 					</div> <!-- /col -->
@@ -369,6 +366,49 @@
 
 				</div> <!-- row -->
 
+				<div class="row">
+				<div class="col-md-16">
+							<article class="widget">
+								<div class="tab-radio-full">
+									<input type="radio" id="tab_radio_1" name="tab-radio-2" value="tabr1" checked><!--
+								--><label for="tab_radio_1" class="btn-md">Add Babies</label><!--
+								--><input type="radio" id="tab_radio_2" name="tab-radio-2" value="tabr2" ><!--
+								--><label for="tab_radio_2" class="btn-md">Add Devices</label><!--
+								--><input type="radio" id="tab_radio_3" name="tab-radio-2" value="tabr3"><!--
+								--><label for="tab_radio_3" class="btn-md">Edit Hospital</label>
+								</div>
+								<div data-tab-radio="tab-radio-2" class="tab-radio-content" id="tabr1">
+									<article class="widget__form">								
+										<input type="text" id="input-1" placeholder="Monthly Average Admission Rate">
+										<input type="text" id="input-2" placeholder="Yearly Average Admission Rate">
+										<button onclick="return false;">Update</button>
+									</article> 
+								</div>
+								<div data-tab-radio="tab-radio-2" class="tab-radio-content" id="tabr2">
+									<article class="widget__form">
+										<input type="text" id="serialnumber" placeholder="Serial Number">
+										<input type="text" id="hours" placeholder="Hours in Use">
+										<input type="text" id="status" placeholder="Status">
+										<button onclick = "AddData()" class="btnlogsign">Update</button>
+									</article>
+								</div>
+								<div data-tab-radio="tab-radio-2" class="tab-radio-content" id="tabr3">
+									<article class="widget__form">
+										<input type="text" id="input-1" placeholder="Name">
+										<input type="text" id="input-2" placeholder="State/Province/Division">
+										<input type="text" id="input-2" placeholder="Training Site">
+										<input type="text"  id="input-2" placeholder="Facility Type">
+										<input type="text"  id="input-2" placeholder="University Afiliation">
+										<button onclick="return false;">Update</button>
+									</article><!-- /widget
+								</div>
+								<div data-tab-radio="tab-radio-2" class="tab-radio-content" id="tabr4">
+									<article class="widget__form">
+										<button onclick="return false;">Send</button>
+									</article><!-- /widget -->
+								</div>
+							</article><!-- /widget -->
+
 
 				<div class="row">
 					
@@ -391,6 +431,7 @@
 							</div>
 						</article><!-- /widget -->
 					</div>
+
 
 					<div class="col-md-5">
 						<article class="widget">
@@ -781,7 +822,7 @@
 						</article><!-- /widget -->
 					</div>
 
-					<div class="col-md-12">
+					<div id="devicetable" class="col-md-12">
 						<article class="widget">
 							<header class="widget__header one-btn">
 								<div class="widget__title">
@@ -814,7 +855,7 @@
 														<img class="media-object" src="img/device.jpg" alt="user">
 													</figure>
 													<div class="media-body post_desc">
-														<h3>Firefly 1</h3>
+														<h3>Firefly</h3>
 														<p>Serial #236</p>
 														<!-- <button class="btn blue btn-sm">Edit</button> -->
 													</div>
@@ -839,7 +880,7 @@
 														<img class="media-object" src="img/device.jpg" alt="user">
 													</figure>
 													<div class="media-body post_desc">
-														<h3>Firefly 2</h3>
+														<h3>Firefly</h3>
 														<p>Serial #254</p>
 														<!-- <button class="btn blue btn-sm">Edit</button> -->
 													</div>
@@ -864,7 +905,7 @@
 														<img class="media-object" src="img/device.jpg" alt="user">
 													</figure>
 													<div class="media-body post_desc">
-														<h3>Firefly 3</h3>
+														<h3>Firefly</h3>
 														<p>Serial #480</p>
 													<!-- 	<button class="btn blue btn-sm">Edit</button> -->
 													</div>
@@ -1087,30 +1128,6 @@
 
 
 		</section> <!-- /content -->
-
-		   <div id="deviceform" class="col-md-12">
-						<article class="widget widget__form">
-							<header class="widget__header">
-								<div class="widget__title">
-									<i class="pe-7s-menu"></i><h3>Input New Device</h3>
-								</div>
-								<div class="widget__config">
-									<a href="#"><!-- <i class="pe-7f-refresh"></i> --></a>
-									<a href="#"><i class="pe-7s-close"></i></a>
-								</div>
-							</header>
-
-							<div class="widget__content">
-							<form name="adddevice">
-								<input type="text" id= "serialnumber" name="serialnumber" placeholder="Serial Number"/>
-								<input type="text" id="hours" name="hours" placeholder="Hours In Use"/>
-								<input type="text" id="status" name="status" placeholder="Status"/>
-								<input id = "button" type = "button" class="btn blue" value = " Add Device " onclick = "AddData()"/>
-							</form>
-							</div>
-						</div>
-						</article>
-					</div>
 
 	</div>
 
