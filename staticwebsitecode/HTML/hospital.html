@@ -33,32 +33,12 @@
             $(rows).appendTo("#devices tbody");
         }   
 
-        function addBabies1() {
-			    // fetch the element :
-			   var element = document.getElementById('number1'); 
-
-			   // get the attribute, parse it and increment it :
-			   value = parseInt(element.getAttribute('value'), 10)+1; 
-
-			   // stores the incremented value :
-			   element.setAttribute('value', value);
-
-			   // and change the innerHTML (conversion to string is implicit)
-			   element.innerHTML = value;
-		}
-
-		function addBabies2() {
-			    // fetch the element :
-			   var element = document.getElementById('number2'); 
-
-			   // get the attribute, parse it and increment it :
-			   value = parseInt(element.getAttribute('value'), 10)+1; 
-
-			   // stores the incremented value :
-			   element.setAttribute('value', value);
-
-			   // and change the innerHTML (conversion to string is implicit)
-			   element.innerHTML = value;
+        function addHospital() {
+			    
+            var name = document.getElementById("name").value;
+            
+            document.getElementById("currenthospital").innerHTML = name;
+            
 		}
 
 		$(document).ready(function () {
@@ -261,13 +241,13 @@
 					<div class="main-stats__stat col-md-3 col-sm-3">
 						<span class="dropdown closed">
 				  			<label class="fixed-width" for="radio_date_2"></label>
-				 			<button class="btn btn-lg btn-block violet dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+				 			<button class="btn btn-lg btn-block violet dropdown-toggle" type="button" id="currenthospital" data-toggle="dropdown">
 				    		St. Boniface Hospital
 						</button>
 
 						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
 						  	<li role="presentation"><a role="menuitem" tabindex="-1" href="index.html">All Hospitals</a></li>
-						    <li role="presentation"><a role="menuitem" tabindex="-1" href="hospital.html">St. Boniface</a></li>
+						    <li role="presentation" id="currenthospital"><a role="menuitem" tabindex="-1" href="hospital.html">St. Boniface Hospital</a></li>
 
 						  </ul>
 				</span>
@@ -393,13 +373,13 @@
 									</article>
 								</div>
 								<div data-tab-radio="tab-radio-2" class="tab-radio-content" id="tabr3">
-									<article class="widget__form">
-										<input type="text" id="input-1" placeholder="Name">
+									<article id="hospitalform" class="widget__form">
+										<input type="text" id="name" placeholder="Name">
 										<input type="text" id="input-2" placeholder="State/Province/Division">
 										<input type="text" id="input-2" placeholder="Training Site">
 										<input type="text"  id="input-2" placeholder="Facility Type">
 										<input type="text"  id="input-2" placeholder="University Affiliation">
-										<button onclick="return false;">Update</button>
+										<button onclick="addHospital()">Update</button>
 									</article><!-- /widget
 								</div>
 								<div data-tab-radio="tab-radio-2" class="tab-radio-content" id="tabr4">
