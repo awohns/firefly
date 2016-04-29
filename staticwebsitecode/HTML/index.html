@@ -57,7 +57,7 @@
     background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
     background: -moz-linear-gradient(top,  #0095cc,  #00678e);
   }
-  /* Fixes submit button height problem in Firefox */
+  /* Fixes submit button height problem in Firefox 
   .tfbutton::-moz-focus-inner {
     border: 0;
   }
@@ -65,7 +65,7 @@
     clear:both;
   }
 
-
+*/
 
     </style>
 	<meta charset="UTF-8">
@@ -296,9 +296,9 @@
         <div class="main-header__date">
          
            <!-- HTML for SEARCH BAR -->
-          <form id="tfnewsearch" >
-            <input type="text" list='hospitallist' class="tftextinput" name="q" id='q' size="21" maxlength="120">
-            <input type="button" value="search hospitals" id ='hospitalsearch' class="tfbutton" onclick=doSearch(q.value)>
+          <form id="tfnewsearch" autocomplete="off">
+            <input type="text" list='hospitallist' class="tftextinput" name="q" id='q' size="21" maxlength="120" placeholder='Hospital Name'>
+            <input type="button" value="search hospitals" id ='hospitalsearch' class="tfbutton" onclick=doSearch(q.value)  >
     </form>
 				
 				
