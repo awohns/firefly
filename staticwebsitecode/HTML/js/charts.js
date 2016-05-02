@@ -81,11 +81,11 @@ AmCharts.ready(function () {
     var graph = new AmCharts.AmGraph();
     graph.type = "smoothedLine";
     graph.valueField = "members";
-    graph.lineColor = "#53d769";
+    graph.lineColor = "#7266EF";
     graph.lineThickness = 3;
     graph.bullet = "round";
     //graph.bulletColor = "rgba(0,0,0,0.3)";
-    graph.bulletBorderColor = "#53d769";
+    graph.bulletBorderColor = "#7266EF";
     graph.bulletBorderAlpha = 1;
     graph.bulletBorderThickness = 3;
     graph.bulletSize = 6;
@@ -123,7 +123,7 @@ AmCharts.ready(function () {
 var chart2 = AmCharts.makeChart("chartdiv2", {
     "type": "serial",
     "theme": "none",
-    "colors": ['#1c7dfa', '#53d769'],
+    "colors": ['#1c7dfa', '#7266EF'],
     "dataProvider": [{
         "country": "USA",
         "visits": 2025
@@ -212,7 +212,7 @@ var chart2 = AmCharts.makeChart("chartdiv2", {
 var chart3 = AmCharts.makeChart("chartdiv3", {
     "type": "pie",
     "theme": "none",
-    "colors": ['#1c7dfa', '#53d769'],
+    "colors": ['#1c7dfa', '#7266EF'],
     "dataProvider": [{
         "title": "New",
         "value": 4852
@@ -233,7 +233,7 @@ var chart3 = AmCharts.makeChart("chartdiv3", {
 var chart4 = AmCharts.makeChart("chartdiv4", {
     "type": "xy",
     "pathToImages": "http://www.amcharts.com/lib/3/images/",
-    "colors": ['#1c7dfa', '#53d769'],
+    "colors": ['#1c7dfa', '#7266EF'],
     "theme": "none",
     "dataProvider": [{
         "y": 10,
@@ -334,7 +334,7 @@ var chart4 = AmCharts.makeChart("chartdiv4", {
 var chart5 = AmCharts.makeChart("chartdiv5", {
     "type": "radar",
     "theme": "none",
-    "colors": ['#53d769', '#1c7dfa'],
+    "colors": ['#7266EF', '#1c7dfa'],
     "dataProvider": [{
         "direction": "N",
         "value": 8

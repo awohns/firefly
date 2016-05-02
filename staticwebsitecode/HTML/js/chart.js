@@ -83,32 +83,32 @@ AmCharts.ready(function () {
     var graph = new AmCharts.AmGraph();
     graph.type = "smoothedLine";
     graph.valueField = "members";
-    graph.lineColor = "#53d769";
+    graph.lineColor = "#7266EF";
     graph.lineThickness = 3;
     graph.bullet = "round";
     //graph.bulletColor = "rgba(0,0,0,0.3)";
-    graph.bulletBorderColor = "#53d769";
+    graph.bulletBorderColor = "#7266EF";
     graph.bulletBorderAlpha = 1;
     graph.bulletBorderThickness = 3;
     graph.bulletSize = 6;
     graph.fillAlphas = 0.2;
-    graph.fillColorsField = "#53d769";
+    graph.fillColorsField = "#7266EF";
     chart.addGraph(graph);
 
     // orders
     var graph1 = new AmCharts.AmGraph();
     graph1.type = "smoothedLine";
     graph1.valueField = "orders";
-    graph1.lineColor = "#1c7dfa";
+    graph1.lineColor = "#FA8072";
     graph1.lineThickness = 3;
     graph1.bullet = "round";
     //graph1.bulletColor = "rgba(0,0,0,0.3)";
-    graph1.bulletBorderColor = "#1c7dfa";
+    graph1.bulletBorderColor = "#FA8072";
     graph1.bulletBorderAlpha = 1;
     graph1.bulletBorderThickness = 3;
     graph1.bulletSize = 6;
     graph1.fillAlphas = 0.2;
-    graph1.fillColorsField = "#1c7dfa";
+    graph1.fillColorsField = "#FA8072";
     chart.addGraph(graph1);
     
     
