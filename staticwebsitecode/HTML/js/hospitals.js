@@ -27,16 +27,16 @@ var devicesArray = JSON.parse(storedDevices);
 //  })
 var search ;
 $(document).ready(function(){
-	displayHospitals()
+	
     $('#q').keypress(function(e){
       if(e.keyCode==13)
       {
-      	search = $('#q').value
-      	console.log('hi')
+      	search = $('#q').val()
+      	console.log(search)
       	counter += 1;
-      		
-      	doSearch($("#q"));
-      	return false;
+      	doSearch(search);
+        return false;
+      	
       
       	// doSearch("#q.value")
       }
@@ -68,8 +68,20 @@ function doSearch(s) {
     console.log(searchedhospitals);  
     //hospitalsArray.push(searchedhospitals)
     localStorage.setItem('hospitals', JSON.stringify(hospitalsArray));
-    window.location= 'file:///Users/anthonywohns/Dropbox/cs179/fireflyproject/firefly/staticwebsitecode/HTML/hospital.html?q=jhkdfs'
-    // Redirect();
+    if (searchedhospitals == "St. Boniface"){
+      window.location= 'file:///Users/anthonywohns/Dropbox/cs179/fireflyproject/firefly/staticwebsitecode/HTML/hospital.html?q=jhkdfs'
+  
+    }
+    else if (searchedhospitals == "Bunia General Hospital")
+    {
+      window.location= 'file:///Users/anthonywohns/Dropbox/cs179/fireflyproject/firefly/staticwebsitecode/HTML/hospital2.html?q=jhkdfs'
+
+    }
+    else if (searchedhospitals == "Hanoi General Hospital")
+    {
+      window.location= 'file:///Users/anthonywohns/Dropbox/cs179/fireflyproject/firefly/staticwebsitecode/HTML/hospital3.html?q=jhkdfs'
+
+    }
 
 }
 
