@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+fieldset {
+	background:
+		linear-gradient(
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0.1)
+		),
+		url(http://www.hdwallpapers.in/walls/morning_sunshine-HD.jpg);
+	background-size: cover;
+	height: 100vh;
+}
+
+.username {
+	position: absolute;
+	top:40%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+}
+
+.password {
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+}
+
+.log-in {
+	position: absolute;
+	top:60%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+}
+
+.sign-up {
+	position: absolute;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+}
+
+p {
+	margin: 0;
+	font-size: 2rem;
+}
