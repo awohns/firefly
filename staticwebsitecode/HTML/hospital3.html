@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	 <style>
+ <style>
       #map {
           margin-left: auto;
           margin-right: auto;
@@ -69,10 +69,15 @@
 
     </style>
 	<meta charset="UTF-8">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Firefly Dashboard</title>
 	
+	<!--<link rel="icon" sizes="192x192" href="img/touch-icon.png" /> 
+	<link rel="apple-touch-icon" href="img/touch-icon-iphone.png" /> 
+	<link rel="apple-touch-icon" sizes="76x76" href="img/touch-icon-ipad.png" /> 
+	<link rel="apple-touch-icon" sizes="120x120" href="img/touch-icon-iphone-retina.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="img/touch-icon-ipad-retina.png" />
+	-->
 	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -81,7 +86,6 @@
 	<!-- Pixeden Icon Fonts -->
 	<link rel="stylesheet" type="text/css" href="css/pe-icon-7-filled.css">
 	<link rel="stylesheet" type="text/css" href="css/pe-icon-7-stroke.css">
-
 	<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
 
 	<script type="text/javascript">
@@ -92,48 +96,26 @@
 		var status = document.getElementById("status").value;
         var rows = "";
 
-            rows += "<tr class='spacer'></tr><tr><td><div class='media'><figure class='pull-left post__img'><img class='media-object' src='img/device.jpg' alt='user'></figure><div class='media-body post_desc'><h3>Firefly</h3><p>Serial #" + serialnumber +"</p></div></div></td><td><p class='post__date'>" + hours + "</p></td><td class='not-padding'><p class='post__info'>" + status + "</p></td><td><a href='#'' onclick='return false;'' class='post__del'><i class='pe-7s-check'></i></a></td></tr>";
+            rows += "<tr class='spacer'></tr><tr><td><div class='media'><figure class='pull-left post__img'><img class='media-object' src='img/device.jpg' alt='user'></figure><div class='media-body post_desc'><h3>Firefly</h3><p>Serial #" + serialnumber +"</p></div></div></td><td><p class='post__date'>" + hours + "</p></td><td class='not-padding'><p class='post__info'>" + status + "</p></td></p></td><td><a href='#'' onclick='return false;'' class='post__del'><i class='pe-7s-check'></i></a></td></tr>";
             $(rows).appendTo("#devices tbody");
         }   
 
-		function addBabies1() {
-			    // fetch the element :
-			   var element = document.getElementById('number1'); 
-
-			   // get the attribute, parse it and increment it :
-			   value = parseInt(element.getAttribute('value'), 10)+1; 
-
-			   // stores the incremented value :
-			   element.setAttribute('value', value);
-
-			   // and change the innerHTML (conversion to string is implicit)
-			   element.innerHTML = value;
-		}
-
-		function addBabies2() {
-			    // fetch the element :
-			   var element = document.getElementById('number2'); 
-
-			   // get the attribute, parse it and increment it :
-			   value = parseInt(element.getAttribute('value'), 10)+1; 
-
-			   // stores the incremented value :
-			   element.setAttribute('value', value);
-
-			   // and change the innerHTML (conversion to string is implicit)
-			   element.innerHTML = value;
+        function addHospital() {
+			    
+            var name = document.getElementById("name").value;
+            
+            document.getElementById("currenthospital").innerHTML = name;
+            window.location = "hospital.html";
+            
 		}
 
 		$(document).ready(function () {
 		    $(".btnlogsign").click(function () {
 		        $('html,body').animate({
-		            scrollTop: $("#map").offset().top
+		            scrollTop: $("#devicetable").offset().top
 		        }, 'slow');
 		    });
 		});
-
-
-    		
 
 	</script>
 </head>
@@ -197,7 +179,31 @@
 <!-- <<<<<<< Updated upstream -->
 
 	<!--
+=======
+<!--
+>>>>>>> Stashed changes
+	<div class="wrapper">
 
+		<aside class="sidebar">
+-->
+			<!--
+			<div class="user-info">
+					<figure class="rounded-image profile__img">
+=======
+			<div class="user-info"> -->
+					<!-- <figure class="rounded-image profile__img">
+>>>>>>> Stashed changes
+						<img class="media-object" src="img/profile.jpg" alt="user">
+					</figure>
+					-->
+					<!--
+					<h2 class="user-info__name">Danica Kumara</h2>
+					<h3 class="user-info__role">Admin Manager</h3>
+<<<<<<< Updated upstream
+					<ul class="user-info__numbers">    </ul>
+				-->
+<!--
+=======
 					<ul class="user-info__numbers">    </ul> -->
 					<!--<ul class="user-info__numbers">
 						<li>
@@ -271,7 +277,7 @@
 				<div class="main-header__nav">
 					<h1 class="main-header__title">
 						<a href="index.html"><i class="pe-7f-home"></i></a>
-						<span><a href="index.html" style="color:white; text-decoration:none;">Firefly Dashboard</a></span>
+						<span>Firefly Dashboard</span>
 					</h1>
 					<!--
 					<ul class="main-header__breadcrumb">
@@ -281,7 +287,7 @@
 					</ul>
 				-->
 				</div>
-  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
   <script src="js/hospitals.js"></script>
 
         <!-- Datalist of All Possible Hospitals: Loads from Javascript-->
@@ -300,60 +306,65 @@
             <input type="text" list='hospitallist' class="tftextinput" name="q" id='q' size="21" maxlength="120" placeholder='Hospital Name'>
             <input type="button" value="search hospitals" id ='hospitalsearch' class="tfbutton" onclick=doSearch(q.value)  >
     </form>
-				
-				
+
 				<span class="main-header__date">
 						<input type="radio" id="radio_date_1" name="tab-radio" value="today" checked>
 						<label class="fixed-width" for="radio_date_1" onclick="window.location.href = 'home.html'">Log Out</label>
 					</span>
+				</div>
 
+
+
+
+
+	<!-- 				<button>
+						<i class="pe-7f-date"></i>
+						<span>Select Region</span>
+					</button> -->
+				</div>
 			</header> <!-- /main-header -->
 
-
-			<div class="main-stats__stat col-md-3 col-sm-3">
+			<div data-tab-radio="tab-radio" class="tab-radio-content row" id="today">
+					<div class="main-stats__stat col-md-3 col-sm-3">
 						<span class="dropdown closed">
 				  			<label class="fixed-width" for="radio_date_2"></label>
-				 			<button class="btn btn-lg btn-block violet dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
-				    		All Hospitals
+				 			<button class="btn btn-lg btn-block violet dropdown-toggle" type="button" id="currenthospital" data-toggle="dropdown">
+				    		Hanoi General Hospital
 						</button>
 
 						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
 						  	<li role="presentation"><a role="menuitem" tabindex="-1" href="index.html">All Hospitals</a></li>
-						    <li role="presentation"><a role="menuitem" tabindex="-1" href="hospital.html">St. Boniface</a></li>
-						    <li role="presentation"><a role="menuitem" tabindex="-1" href="hospital.html">Bunia General Hospital</a></li>
+						    <li role="presentation" id="currenthospital"><a role="menuitem" tabindex="-1" href="hospital.html">St. Boniface Hospital</a></li>
+						    <li role="presentation" id="currenthospital"><a role="menuitem" tabindex="-1" href="hospital2.html">Bunia General Hospital</a></li>
 						    <li role="presentation" id="currenthospital"><a role="menuitem" tabindex="-1" href="hospital3.html">Hanoi General Hospital</a></li>
+
 						  </ul>
 				</span>
-				<a href="addhospital.html"><button class="btn violet inverse"> Add New Hospital </button></a>
 						
 						
 					</div> <!-- /col -->
 				  
 				  <div class="main-stats__stat col-md-3 col-sm-3 col-xs-4">
 						<div class="stat-circle">
-							<h3 id="number1" value="873">873</h3>
+							<h3 id="number1" value="194">134</h3>
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92">
 							<circle style="opacity:0.16;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="46" cy="46" r="45"/>
 							<path style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" d="M6.185,66.968C13.725,81.256,28.721,91,46,91c24.853,0,45-20.147,45-45C91,21.147,70.853,1,46,1"/>
 							</svg>
 						</div> <!-- /stat-circle -->
 						<h4 class="main-stats__subtitle">Fireflies<br> Used<br>
-							<!-- <span class="main-stats__resume">+ 65%</span> -->
-							<!-- <button class="btn white fixed" onclick="addBabies1()">+ Add</button> -->
 						</h4>
 
 					</div> <!-- /col -->
 
 					<div class="main-stats__stat col-md-3 col-sm-3 col-xs-4">
 						<div class="stat-circle">
-							<h3>57</h3>
+							<h3>15</h3>
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92">
 								<circle style="opacity:0.16;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="46" cy="46" r="45"/>
 								<path style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" d="M84.839,68.718C88.749,62.049,91,54.289,91,46C91,21.147,70.853,1,46,1"/>
 							</svg>
 						</div> <!-- /stat-circle -->
-<!-- 							<input type="text" id="number" value="0"></input>
-							<input type="button" onclick="buttonClick()" value="Add Babies" /> -->
 						<h4 class="main-stats__subtitle">Fireflies<br> On Now<br>
 							<!-- <span class="main-stats__resume">+ 43%</span> -->
 						</h4>
@@ -367,7 +378,7 @@
 								<path style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" d="M91,46C91,21.147,70.853,1,46,1"/>
 							</svg>
 						</div> <!-- /stat-circle -->
-						<h4 class="main-stats__subtitle">Trained<br> Hospitals<br>
+						<h4 class="main-stats__subtitle">Nearby<br> Hospitals<br>
 							<!-- <span class="main-stats__resume">+ 25%</span> -->
 						</h4>
 					</div> <!-- /col -->
@@ -376,50 +387,96 @@
 
 				<div data-tab-radio="tab-radio" class="tab-radio-content row" id="yesterday">
 					<div class="main-stats__stat col-md-3 col-sm-3">
-						<h3 class="main-stats__title">All Hospitals</h3>
-						<p class="main-stats__resume">Providing jaunice treatment <br> to babies in need in 342 hospitals <br> across 24 countries.</p>
+						<h3 class="main-stats__title">St. Boniface Hospital</h3>
+						<p class="main-stats__resume">Located in Fond-des-Blancs, Haiti. <br> District-level hospital. <br> Trained personnel on site.</p>
 						
 					</div> <!-- /col -->
-
-					<div class="main-stats__stat col-md-3 col-sm-3 col-xs-4">
+				  
+				  <div class="main-stats__stat col-md-3 col-sm-3 col-xs-4">
 						<div class="stat-circle">
-							<h3 id="number2" value="194">194</h3>
+							<h3 id="number2" value="184">27</h3>
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92">
 							<circle style="opacity:0.16;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="46" cy="46" r="45"/>
 							<path style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" d="M6.185,66.968C13.725,81.256,28.721,91,46,91c24.853,0,45-20.147,45-45C91,21.147,70.853,1,46,1"/>
 							</svg>
 						</div> <!-- /stat-circle -->
-						<h4 class="main-stats__subtitle">Fireflies<br> Used<br>
+						<h4 class="main-stats__subtitle">Babies<br> Admitted<br>
+							<button class="btn white fixed" onclick="addBabies2()">+ Add</button>
 						</h4>
 
-					</div> <!-- /col -->
-				  
+					</div> 
+
 				  <div class="main-stats__stat col-md-3 col-sm-3 col-xs-4">
 						<div class="stat-circle">
-							<h3>77</h3>
+							<h3>4</h3>
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92">
 								<circle style="opacity:0.16;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="46" cy="46" r="45"/>
 								<path style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" d="M84.839,68.718C88.749,62.049,91,54.289,91,46C91,21.147,70.853,1,46,1"/>
 							</svg>
 						</div> <!-- /stat-circle -->
-						<h4 class="main-stats__subtitle">Fireflies<br> On Now<br>
+						<h4 class="main-stats__subtitle">Fireflies<br> In Use<br>
+							<span class="main-stats__resume">+ 49%</span>
 						</h4>
 					</div> <!-- /col -->
-
+<!-- /col -->
 
 					<div class="main-stats__stat col-md-3 col-sm-3 col-xs-4">
 						<div class="stat-circle">
-							<h3>8</h3>
+							<h3>1</h3>
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92">
 								<circle style="opacity:0.16;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="46" cy="46" r="45"/>
 								<path style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;" d="M91,46C91,21.147,70.853,1,46,1"/>
 							</svg>
 						</div> <!-- /stat-circle -->
-						<h4 class="main-stats__subtitle">Trained <br> Hospitals<br>
+						<h4 class="main-stats__subtitle">Devices<br> Repaired<br>
+							<span class="main-stats__resume">+ 15%</span>
 						</h4>
 					</div> <!-- /col -->
 
 				</div> <!-- row -->
+
+				<div class="row">
+				<div class="col-md-16">
+							<article class="widget">
+								<div class="tab-radio-full">
+									<input type="radio" id="tab_radio_1" name="tab-radio-2" value="tabr1" checked><!--
+								--><label for="tab_radio_1" class="btn-md">Add Babies</label><!--
+								--><input type="radio" id="tab_radio_2" name="tab-radio-2" value="tabr2" ><!--
+								--><label for="tab_radio_2" class="btn-md">Add Devices</label><!--
+								--><input type="radio" id="tab_radio_3" name="tab-radio-2" value="tabr3"><!--
+								--><label for="tab_radio_3" class="btn-md">Edit Hospital</label>
+								</div>
+								<div data-tab-radio="tab-radio-2" class="tab-radio-content" id="tabr1">
+									<article class="widget__form">								
+										<input type="text" id="input-1" placeholder="Monthly Average Admission Rate">
+										<input type="text" id="input-2" placeholder="Yearly Average Admission Rate">
+										<button onclick="return false;">Update</button>
+									</article> 
+								</div>
+								<div data-tab-radio="tab-radio-2" class="tab-radio-content" id="tabr2">
+									<article class="widget__form">
+										<input type="text" id="serialnumber" placeholder="Serial Number">
+										<input type="text" id="hours" placeholder="Expected/Actual Usage">
+										<input type="text" id="status" placeholder="Contact name, Contact Email">
+										<button onclick = "AddData()" class="btnlogsign">Update</button>
+									</article>
+								</div>
+								<div data-tab-radio="tab-radio-2" class="tab-radio-content" id="tabr3">
+									<article id="hospitalform" class="widget__form">
+										<input type="text" id="name" placeholder="Name">
+										<input type="text" id="input-2" placeholder="State/Province/Division">
+										<input type="text" id="input-2" placeholder="Training Site">
+										<input type="text"  id="input-2" placeholder="Facility Type">
+										<input type="text"  id="input-2" placeholder="University Affiliation">
+										<button onclick="addHospital()">Update</button>
+									</article><!-- /widget
+								</div>
+								<div data-tab-radio="tab-radio-2" class="tab-radio-content" id="tabr4">
+									<article class="widget__form">
+										<button onclick="return false;">Send</button>
+									</article><!-- /widget -->
+								</div>
+							</article><!-- /widget -->
 
 
 				<div class="row">
@@ -437,7 +494,7 @@
 							</header>
 
 							<div class="widget__content filled">
-								<p class="graph-number"><!-- <span>873</span> --> Projected Hours is Purple
+								<p class="graph-number"> Projected Hours is Purple
 								<br>
 								Actual Usage is Orange</p>
 								<div id="chartdiv" style="width: 100%; height: 388px;"></div>
@@ -445,6 +502,7 @@
 							</div>
 						</article><!-- /widget -->
 					</div>
+
 
 					<div class="col-md-5">
 						<article class="widget">
@@ -465,7 +523,7 @@
 								  <div class="alert__icon pull-left">
 								  	<i class="pe-7s-check"></i>
 								  </div>
-								  <p class="alert__text"> Device #236 Successfully Repaired<br> St. Jude's Hospital, Myanmar</p>
+								  <p class="alert__text"> Device #236 Successfully Repaired<br> Hanoi General Hospital, Vietnam</p>
 								</div>
 								
 								<div class="alert alert-fixed alert-warning alert-dismissible" role="alert">
@@ -473,7 +531,7 @@
 								  <div class="alert__icon pull-left">
 								  	<i class="pe-7s-attention"></i>
 								  </div>
-								  <p class="alert__text"> Warning! Usage Low.<br> St. Boniface Hospital, Haiti</p>
+								  <p class="alert__text"> Warning! Usage Low.<br> Hanoi General Hospital, Vietnam</p>
 								</div>
 								
 								<div class="alert alert-fixed alert-info alert-dismissible" role="alert">
@@ -481,7 +539,7 @@
 								  <div class="alert__icon pull-left">
 								  	<i class="pe-7s-attention"></i>
 								  </div>
-								  <p class="alert__text"> Warning! Usage High. <br>Asia Royal Hospital, Myanmar</p>
+								  <p class="alert__text"> Warning! Usage High. <br>Hanoi General Hospital, Vietnam</p>
 								</div>
 								
 								<div class="alert alert-fixed alert-danger alert-dismissible" role="alert">
@@ -489,7 +547,7 @@
 								  <div class="alert__icon pull-left">
 								  	<i class="pe-7s-close-circle"></i>
 								  </div>
-								  <p class="alert__text"> Error! Device #572 Broken. <br>Cure Children's Hospital, Uganda</p>
+								  <p class="alert__text"> Error! Device #572 Broken. <br>Hanoi General Hospital, Vietnam</p>
 								</div>
 								
 							</div> <!-- /widget__content -->
@@ -835,6 +893,120 @@
 						</article><!-- /widget -->
 					</div>
 
+					<div id="devicetable" class="col-md-12">
+						<article class="widget">
+							<header class="widget__header one-btn">
+								<div class="widget__title">
+									<i class="pe-7f-menu"></i><h3>Devices</h3>
+								</div>
+								<div class="widget__config">
+									<a href="#"><i class="pe-7f-refresh"></i></a>
+								</div>
+							</header>
+							
+							<div class="widget__content table-responsive">
+								
+								<table id="devices" class="table table-striped media-table">
+							  	<thead>
+							  		<tr>
+							  			<th width="270">Inventory</th>
+							  			<th width="120">Expected/Actual<br>Usage</th>
+							  			<th>Point Person</th>
+							  			<th>In Use?</th>
+							  		</tr>
+							  	</thead>
+							  	<tbody>
+
+							  	
+							  		<tr class="spacer"></tr>
+							  		<tr>
+							  			<td>
+							  				<div class="media">
+													<figure class="pull-left post__img">
+														<img class="media-object" src="img/device.jpg" alt="user">
+													</figure>
+													<div class="media-body post_desc">
+														<h3>Firefly</h3>
+														<p>Serial #236</p>
+														<!-- <button class="btn blue btn-sm">Edit</button> -->
+													</div>
+												</div>
+							  			</td>
+							  			<td>
+							  				<p class="post__date">23 hours/22 hours</p>
+							  			</td>
+							  			<td class="not-padding">
+							  				<p class="post__info">Amy Huang, amyhuang@distributor.org</p>
+							  			</td>
+							  			<td>
+							  				<a href="#" onclick="return false;" class="post__del"><i class="pe-7s-check"></i></a>
+							  			</td>
+							  		</tr>
+
+							  		<tr class="spacer"></tr>
+							  		<tr>
+							  			<td>
+							  				<div class="media">
+													<figure class="pull-left post__img">
+														<img class="media-object" src="img/device.jpg" alt="user">
+													</figure>
+													<div class="media-body post_desc">
+														<h3>Firefly</h3>
+														<p>Serial #254</p>
+														<!-- <button class="btn blue btn-sm">Edit</button> -->
+													</div>
+												</div>
+							  			</td>
+							  			<td>
+							  				<p class="post__date">94 hours/96 hours</p>
+							  			</td>
+							  			<td class="not-padding">
+							  				<p class="post__info">Wilder Wohns, fireflyguy@distributor.com</p>
+							  			</td>
+							  			<td>
+							  				<a href="#" onclick="return false;" class="post__del"><i class="pe-7f-close"></i></a>
+							  			</td>
+							  		</tr>
+
+							  		<tr class="spacer"></tr>
+							  		<tr>
+							  			<td>
+							  				<div class="media">
+													<figure class="pull-left post__img">
+														<img class="media-object" src="img/device.jpg" alt="user">
+													</figure>
+													<div class="media-body post_desc">
+														<h3>Firefly</h3>
+														<p>Serial #480</p>
+													<!-- 	<button class="btn blue btn-sm">Edit</button> -->
+													</div>
+												</div>
+							  			</td>
+							  			<td>
+							  				<p class="post__date">56 hours/54 hours</p>
+							  			</td>
+							  			<td class="not-padding">
+							  				<p class="post__info">Ariana Siegel, ariana@dancing.org</p>
+							  			</td>
+							  			<td>
+							  				<a href="#" onclick="return false;" class="post__del"><i class="pe-7s-check"></i></a>
+							  			</td>
+							  		</tr>
+
+							  	</tbody>
+								</table>
+								
+
+								
+							</div> <!-- /widget__content -->
+
+						</article><!-- /widget -->
+					</div>
+
+				</div> <!-- /row -->
+
+
+
 	<div class="row">
 					
 					<div class="col-md-">
@@ -1027,128 +1199,6 @@
 
 
 		</section> <!-- /content -->
-
-			     
-						</article>
-						
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var myLatLng = {lat:8.7832, lng:34.5085};
-        var mapDiv = document.getElementById('map');
-        var map = new google.maps.Map(mapDiv, {
-          center: myLatLng,
-          zoom: 2
-        });
-        
-        var image  = "http://www.ucronia.net/project/images/yellowdot.png"
-        // var marker = new google.maps.Marker({
-        //   position: myLatLng,
-        //   map: map,
-        //   title: 'Hello World!',
-        //   icon: image
-        // });
-        var ugandacontent = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Bunia General Hospital</h1>'+
-            '<div id="bodyContent">'+
-            '<p><b>Bunia General Hospital has 5 firefly devices and is located in Uganda. ' +
-            
-            '<p> <a href="http://team10.sp16.cs179.org/hospital.html">'+
-            'Go to the Hospital Page</a> '+
-          
-            '</div>'+
-            '</div>';
-        var uganda = {lat: 1.559304, lng: 30.164372}
-         var ugandawindow = new google.maps.InfoWindow({
-          content: ugandacontent
-        });
-        var marker2 = new google.maps.Marker({
-        
-          position: uganda,
-          map: map,
-          icon:image
-        });
-
-        var marker = new google.maps.Marker({
-          position: hanoi,
-          map: map,
-          title: 'Hanoi General Hospital',
-          icon: image
-        });
-        marker2.addListener('click', function() {
-          ugandawindow.open(map, marker2);
-        });  
-
-
-         var hanoi = {lat: 21.008470, lng: 105.484564};
-
-         var contentString = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Hanoi General Hospital</h1>'+
-            '<div id="bodyContent">'+
-            '<p><b>Hanoi General Hospital has 10 firefly devices and is located in Vietnam. ' +
-            
-            '<p> <a href="http://team10.sp16.cs179.org/hospital.html">'+
-            'Go to the Hospital Page</a> '+
-          
-            '</div>'+
-            '</div>';
-
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
-        });
-
-        var marker = new google.maps.Marker({
-          position: hanoi,
-          map: map,
-          title: 'Hanoi General Hospital',
-          icon: image
-        });
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
-        });  
-
-
-        //Haiti
-        var haiticontent = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">St. Boniface Hospital</h1>'+
-            '<div id="bodyContent">'+
-            '<p><b>St. Boniface  Hospital has 20 firefly devices and is located in Haiti. ' +
-            
-            '<p> <a href="http://team10.sp16.cs179.org/hospital.html">'+
-            'Go to the Hospital Page</a> '+
-          
-            '</div>'+
-            '</div>';
-        var haiti = {lat:18.292751, lng:-73.136702}
-         var haitiwindow = new google.maps.InfoWindow({
-          content: haiticontent
-        });
-        var haitimarker = new google.maps.Marker({
-        
-          position: haiti,
-          map: map,
-          icon:image
-        });
-
-       
-        haitimarker.addListener('click', function() {
-          haitiwindow.open(map, haitimarker);
-        });  
-
-
-
-}
-    
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
-        async defer></script>
-					</div>
 
 	</div>
 
