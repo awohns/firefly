@@ -27,11 +27,7 @@ header {
     display: inline-block;
     font-size: 2rem;
     position: absolute;
-<<<<<<< HEAD
-	top:100%;
-=======
-	top:150%;
->>>>>>> origin/master
+	top:110%;
 	right:56%;
     -webkit-transition-duration: 0.2s; /* Safari */
     transition-duration: 0.2s;
@@ -46,11 +42,7 @@ header {
     display: inline-block;
     font-size: 2rem;
     position: absolute;
-<<<<<<< HEAD
-	top:100%;
-=======
-	top:150%;
->>>>>>> origin/master
+	top:110%;
 	right:10%;
     -webkit-transition-duration: 0.2s; /* Safari */
     transition-duration: 0.2s;
