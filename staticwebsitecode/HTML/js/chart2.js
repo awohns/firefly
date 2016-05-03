@@ -4,32 +4,32 @@
 var lineChartData = [
     {
         "date": "2012-01-01",
-        "members": 80,
+        "members": 40,
         "orders": 40
     },
     {
         "date": "2012-02-01",
-        "members": 72,
+        "members": 40,
         "orders": 20
     },
     {
        "date": "2012-03-01",
-        "members": 80,
+        "members": 40,
         "orders": 30
     },
     {
        "date": "2012-04-01",
-        "members": 20,
+        "members": 40,
         "orders": 60
     },
     {
        "date": "2012-05-01",
-        "members": 28,
+        "members": 48,
         "orders": 40
     },
     {
         "date": "2012-06-01",
-        "members": 20,
+        "members": 40,
         "orders": 80
     }
 ];
@@ -121,6 +121,7 @@ AmCharts.ready(function () {
     chartCursor.categoryBalloonEnabled = false;
     
     // WRITE
-    chart.write("chartdiv");
+    chart.write("chartdiv2");
 
 });
+
