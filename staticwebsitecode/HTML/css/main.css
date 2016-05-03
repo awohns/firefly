@@ -2793,6 +2793,7 @@ a.btn-circle:hover, button.btn-circle:hover {
   font-weight: 100;
 }
 
+
 .alert-dismissable .close, .alert-dismissible .close {
   position: absolute;
   top: 5px;
@@ -2852,6 +2853,7 @@ a.btn-circle:hover, button.btn-circle:hover {
 .alert-fixed .alert__text {
   left: 85px;
 }
+
 
 /*********************************************
 *** Table  Stuff (some bootstrap rewrites) ***
