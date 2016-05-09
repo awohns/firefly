@@ -1,35 +1,37 @@
 // since v3, chart can accept data in JSON format
 // if your category axis parses dates, you should only
 // set date format of your data (dataDateFormat property of AmSerialChart)            
+
+//members and orders refer to the x-axis and y-axis of the graph on each pages
 var lineChartData = [
     {
         "date": "2012-01-01",
-        "members": 80,
-        "orders": 40
+        "members": 10,
+        "orders": 50
     },
     {
         "date": "2012-02-01",
-        "members": 72,
-        "orders": 20
+        "members": 10,
+        "orders": 5
     },
     {
        "date": "2012-03-01",
-        "members": 80,
+        "members": 40,
         "orders": 30
     },
     {
        "date": "2012-04-01",
-        "members": 20,
+        "members": 40,
         "orders": 60
     },
     {
        "date": "2012-05-01",
-        "members": 28,
+        "members": 48,
         "orders": 40
     },
     {
         "date": "2012-06-01",
-        "members": 20,
+        "members": 40,
         "orders": 80
     }
 ];
